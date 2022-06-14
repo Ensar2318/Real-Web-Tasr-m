@@ -1,0 +1,12 @@
+$titleBlueColor: #37517e;
+$sectionBg: #f3f5fa;
+
+@mixin sectionTitle {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+}
