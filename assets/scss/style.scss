@@ -685,6 +685,10 @@ section {
 # faq
 --------------------------------------------------------------*/
 #faq {
+  background-image: url(../img/faq-bg.png);
+  background-position: bottom right;
+  background-size: auto;
+  background-repeat: no-repeat;
   h3 {
     font-size: 42px;
     text-align: center;
@@ -786,8 +790,8 @@ section {
 --------------------------------------------------------------*/
 #teklif {
   padding-top: 100px;
-  background-image: url(../img/teklif-bg.png);
-  background-position: bottom;
+  background-image: url(../img/hero-bg.png);
+  background-position: 0px 150px;
   background-repeat: no-repeat;
   background-size: cover;
   h3 {
@@ -868,18 +872,17 @@ section {
 #footer {
   background-color: #fafafa;
   padding-top: 86px;
-  img{
+  img {
     padding-bottom: 20px;
   }
   h5 {
-  
     font-size: 18px;
     font-family: "Metropolis-Medium";
   }
   .mail {
     margin-top: 84px;
     margin-bottom: 0;
-    @include md{
+    @include md {
       margin-top: 30px;
     }
   }
@@ -888,36 +891,36 @@ section {
     align-items: center;
     margin-top: 16px;
     a {
-    color: #000000;
-    font-size: 20px;
-    &+a{
-      margin-left: 30px;
-    }
+      color: #000000;
+      font-size: 20px;
+      & + a {
+        margin-left: 30px;
+      }
     }
   }
-  .link-title{
+  .link-title {
     margin-bottom: 48px;
-    @include md{
+    @include md {
       margin-bottom: 20px;
     }
   }
-  ol li{
+  ol li {
     margin-bottom: 28px;
-    @include md{
+    @include md {
       margin-bottom: 10px;
     }
-    a{
+    a {
       font-size: 18px;
       font-family: "Metropolis-Regular";
-      &:hover{
+      &:hover {
         color: #000000a9;
       }
     }
   }
-  .author{
-    background-color: #F7F7F7;
+  .author {
+    background-color: #f7f7f7;
     margin-top: 80px;
-    p{
+    p {
       padding: 34px 0;
       text-align: center;
       margin: 0;
