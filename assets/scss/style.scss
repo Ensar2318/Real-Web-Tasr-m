@@ -149,20 +149,50 @@ section {
 --------------------------------------------------------------*/
 #hero {
   background-image: url(../img/hero-bg.png);
-  height: 100vh;
   background-size: cover;
   margin-top: 120px;
   padding-top: 140px;
 
+  .w-60 {
+    width: 60%;
+    @include sm {
+      margin: auto;
+    }
+  }
+  img {
+    @include sm {
+      width: 60%;
+    }
+  }
   h1 {
     font-family: "Metropolis-Regular", sans-serif;
     font-size: 68px;
     margin-bottom: 44px;
+    @include xxl {
+      font-size: 48px;
+    }
+    @include lg {
+      font-size: 32px;
+    }
+    @include md {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
   h3 {
     font-size: 32px;
     opacity: 0.5;
     margin-bottom: 68px;
+    @include xxl {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    @include lg {
+      font-size: 18px;
+    }
+    @include md {
+      font-size: 16px;
+    }
   }
   a {
     display: block;
@@ -176,11 +206,15 @@ section {
     &:hover {
       opacity: 0.8;
     }
+    @include lg {
+      font-size: 12px;
+    }
   }
   .heroSwiper {
     .swiper-pagination {
       position: relative;
-      margin-top: 50px;
+      margin-top: 20px;
+
       .swiper-pagination-bullet {
         width: 16px;
         height: 16px;
@@ -214,6 +248,19 @@ section {
       border: #eaeaea 2px solid;
       transition: 0.3s;
       background: none;
+      @include xxl {
+        padding: 10px 30px;
+      }
+      @include xl {
+        padding: 10px 24px;
+      }
+      @include lg {
+        margin: 0px 6px 10px 6px;
+      }
+      @include sm {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
       &:hover {
         background-color: $defaultBlack;
         color: #fff;
@@ -241,6 +288,11 @@ section {
       border-radius: 30px;
       border: solid #ffffff 2px;
       backdrop-filter: blur(10px);
+      @include md {
+        position: static;
+        background-color: #bcbcbc;
+        margin: 0 10px;
+      }
       i {
         font-size: 20px;
         color: #fff;
@@ -259,6 +311,11 @@ section {
       border-radius: 30px;
       border: solid #ffffff 2px;
       backdrop-filter: blur(10px);
+      @include md {
+        position: static;
+        background-color: #bcbcbc;
+        margin: 0 10px;
+      }
       i {
         font-size: 20px;
         color: #fff;
@@ -294,6 +351,16 @@ section {
           padding-left: 40px;
           background-color: rgba(0, 0, 0, 0.5);
           border-radius: 12px;
+          @include xxl {
+            height: 120px;
+          }
+          @include lg {
+            height: 80px;
+          }
+          @include md {
+            padding: 20px;
+          }
+
           h4 {
             font-size: 24px;
             font-family: "Metropolis-Bold", sans-serif;
@@ -301,6 +368,12 @@ section {
             z-index: 2;
             margin-bottom: 14px;
             text-transform: uppercase;
+            @include lg {
+              font-size: 20px;
+            }
+            @include md {
+              font-size: 16px;
+            }
           }
           h5 {
             font-size: 18px;
@@ -309,6 +382,12 @@ section {
             z-index: 2;
             margin: 0;
             text-transform: uppercase;
+            @include lg {
+              font-size: 14px;
+            }
+            @include md {
+              font-size: 12p;
+            }
           }
         }
       }
@@ -316,6 +395,9 @@ section {
   }
   .btn-container {
     margin-top: 70px;
+    @include md {
+      margin-top: 30px;
+    }
     .all-product-btn {
       font-family: "Metropolis-Medium";
       border-radius: 30px;
@@ -364,6 +446,10 @@ section {
       border-radius: 30px;
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
+      @include md {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -382,6 +468,10 @@ section {
       border-radius: 30px;
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
+      @include md {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -439,6 +529,10 @@ section {
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include sm {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -458,6 +552,10 @@ section {
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include sm {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -546,6 +644,7 @@ section {
     border-radius: 30px;
     position: relative;
     transition: 0.3s;
+    
     &:hover {
       background-color: #eaeaea;
     }

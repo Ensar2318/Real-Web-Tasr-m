@@ -4,7 +4,7 @@ $(document).ready(function() {
         fadeEffect: { crossFade: true },
         virtualTranslate: true,
         autoplay: {
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: true,
         },
         pagination: {

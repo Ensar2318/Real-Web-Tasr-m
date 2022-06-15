@@ -176,10 +176,25 @@ section {
 --------------------------------------------------------------*/
 #hero {
   background-image: url(../img/hero-bg.png);
-  height: 100vh;
   background-size: cover;
   margin-top: 120px;
   padding-top: 140px;
+}
+
+#hero .w-60 {
+  width: 60%;
+}
+
+@media (max-width: 576px) {
+  #hero .w-60 {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero img {
+    width: 60%;
+  }
 }
 
 #hero h1 {
@@ -188,10 +203,48 @@ section {
   margin-bottom: 44px;
 }
 
+@media (max-width: 1400px) {
+  #hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
 #hero h3 {
   font-size: 32px;
   opacity: 0.5;
   margin-bottom: 68px;
+}
+
+@media (max-width: 1400px) {
+  #hero h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h3 {
+    font-size: 16px;
+  }
 }
 
 #hero a {
@@ -209,9 +262,15 @@ section {
   opacity: 0.8;
 }
 
+@media (max-width: 992px) {
+  #hero a {
+    font-size: 12px;
+  }
+}
+
 #hero .heroSwiper .swiper-pagination {
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #hero .heroSwiper .swiper-pagination .swiper-pagination-bullet {
@@ -252,6 +311,31 @@ section {
   background: none;
 }
 
+@media (max-width: 1400px) {
+  #whatWeDo ol li {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #whatWeDo ol li {
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  #whatWeDo ol li {
+    margin: 0px 6px 10px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  #whatWeDo ol li {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+
 #whatWeDo ol li:hover {
   background-color: #000000;
   color: #fff;
@@ -290,6 +374,14 @@ section {
           backdrop-filter: blur(10px);
 }
 
+@media (max-width: 768px) {
+  #whatWeDo .swiper-container .what-btn-prev {
+    position: static;
+    background-color: #bcbcbc;
+    margin: 0 10px;
+  }
+}
+
 #whatWeDo .swiper-container .what-btn-prev i {
   font-size: 20px;
   color: #fff;
@@ -315,6 +407,14 @@ section {
   border: solid #ffffff 2px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  #whatWeDo .swiper-container .what-btn-next {
+    position: static;
+    background-color: #bcbcbc;
+    margin: 0 10px;
+  }
 }
 
 #whatWeDo .swiper-container .what-btn-next i {
@@ -362,6 +462,24 @@ section {
   border-radius: 12px;
 }
 
+@media (max-width: 1400px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
+    height: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
+    padding: 20px;
+  }
+}
+
 #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h4 {
   font-size: 24px;
   font-family: "Metropolis-Bold", sans-serif;
@@ -369,6 +487,18 @@ section {
   z-index: 2;
   margin-bottom: 14px;
   text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h4 {
+    font-size: 16px;
+  }
 }
 
 #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
@@ -380,8 +510,26 @@ section {
   text-transform: uppercase;
 }
 
+@media (max-width: 992px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
+    font-size: 12p;
+  }
+}
+
 #whatWeDo .btn-container {
   margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  #whatWeDo .btn-container {
+    margin-top: 30px;
+  }
 }
 
 #whatWeDo .btn-container .all-product-btn {
@@ -450,6 +598,13 @@ section {
   background-color: #f7f7f7;
 }
 
+@media (max-width: 768px) {
+  #WhatElseWeDoSide .swiper-container .what-else-btn-prev {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
 #WhatElseWeDoSide .swiper-container .what-else-btn-prev i {
   font-size: 20px;
   color: #575757;
@@ -474,6 +629,13 @@ section {
   border-radius: 30px;
   border: solid #ffffff 3px;
   background-color: #f7f7f7;
+}
+
+@media (max-width: 768px) {
+  #WhatElseWeDoSide .swiper-container .what-else-btn-next {
+    position: static;
+    margin: 10px 20px;
+  }
 }
 
 #WhatElseWeDoSide .swiper-container .what-else-btn-next i {
@@ -556,6 +718,13 @@ section {
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+@media (max-width: 576px) {
+  #blog .swiper-container .blog-btn-prev {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
 #blog .swiper-container .blog-btn-prev i {
   font-size: 20px;
   color: #575757;
@@ -582,6 +751,13 @@ section {
   background-color: #f7f7f7;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 576px) {
+  #blog .swiper-container .blog-btn-next {
+    position: static;
+    margin: 10px 20px;
+  }
 }
 
 #blog .swiper-container .blog-btn-next i {
