@@ -71,7 +71,7 @@ $(document).ready(function() {
             prevEl: ".what-else-btn-prev",
         },
         autoplay: {
-            delay: 2000,
+            delay: 5000,
         },
         breakpoints: {
 
@@ -95,6 +95,67 @@ $(document).ready(function() {
         }
     });
     //What else we do slider kısmı
+
+
+
+    //Blog swiper kısmı
+    var blogSwiper = new Swiper(".blogSwiper", {
+        slidesPerView: 1,
+        speed: 1000,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".blog-btn-next",
+            prevEl: ".blog-btn-prev",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+
+            499: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 30
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 40
+            },
+
+            1200: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            },
+
+        }
+    });
+    //Blog swiper kısmı
+
+     //Blog Detail swiper kısmı
+     var blogDetail = new Swiper(".blogDetailSwiper", {
+        slidesPerView: 1,
+        speed: 1000,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".blog-Detail-btn-next",
+            prevEl: ".blog-Detail-btn-prev",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+    //Blog Detail swiper kısmı
+
 
 
 });

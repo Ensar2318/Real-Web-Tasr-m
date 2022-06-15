@@ -20,6 +20,23 @@
   font-family: "Metropolis-Bold";
   src: url(../fonts/Metropolis-Bold.otf) format("opentype");
 }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(../fonts/Montserrat-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(../fonts/Montserrat-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(../fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(../fonts/Montserrat-Bold.otf) format("opentype");
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -310,11 +327,7 @@ section {
       align-items: center;
       text-transform: uppercase;
       &:hover {
-        background-color: #000000;
-        color: #fff;
-        i {
-          color: #fff;
-        }
+        background-color: #eaeaea;
       }
       i {
         transition: 0.3s;
@@ -402,30 +415,446 @@ section {
 # Blog Side
 --------------------------------------------------------------*/
 #blog {
+  background-color: #fafafa;
   h3 {
-    font-family: "Metropolis-Medium";
-    font-size: 30px;
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
+  .swiper-container {
+    position: relative;
+    .blog-btn-prev {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 100px);
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+    .blog-btn-next {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 100px);
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+
+    .blogSwiper {
+      .swiper-slide {
+        .blog-card {
+          .card-head {
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            background-color: #f5f5f5;
+            padding: 30px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .card-body {
+            background-color: #fff;
+            padding: 44px;
+            h4 {
+              font-size: 16px;
+              font-family: "Montserrat-Bold", sans-serif;
+              text-transform: uppercase;
+            }
+            .card-body-detail {
+              margin-top: 52px;
+              display: flex;
+              justify-content: space-between;
+              a {
+                display: flex;
+                align-items: center;
+                font-family: "Montserrat-SemiBold", sans-serif;
+                font-size: 16px;
+                border: solid 1px #e8e8e8;
+                padding: 12px 50px 12px 40px;
+                border-radius: 8px;
+                position: relative;
+                transition: 0.3s;
+                &:hover {
+                  background-color: #e8e8e8;
+                  color: #fff;
+                  i {
+                    color: #fff;
+                  }
+                }
+                i {
+                  transition: 0.3s;
+                  color: #cbcbcb;
+                  position: absolute;
+                  right: 13px;
+                }
+              }
+              .date {
+                display: flex;
+                color: #bcbcbc;
+                align-items: center;
+                i {
+                  padding-right: 8px;
+                  font-size: 20px;
+                }
+                h6 {
+                  color: #bcbcbc;
+                  font-family: "Montserrat-SemiBold";
+                  font-size: 14px;
+                  margin: 0;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-btn {
+    text-transform: uppercase;
+    font-family: "Metropolis-Medium";
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 74px;
+    border: solid 1px #eaeaea;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    i {
+      opacity: 0.24;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
 }
 /*--------------------------------------------------------------
-# Skills
+# BlogDetail
 --------------------------------------------------------------*/
+#blogDetail {
+  .swiper-container {
+    position: relative;
+    .blog-Detail-btn-prev {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 30px);
+      left: -90px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+    .blog-Detail-btn-next {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 30px);
+      right: -90px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+
+    .blogDetailSwiper {
+      .swiper-pagination {
+        position: relative;
+        margin-top: 30px;
+        display: flex;
+        .swiper-pagination-bullet {
+          width: 16px;
+          height: 16px;
+          margin: 0 8px;
+          background-color: #a8a8a8;
+        }
+      }
+      .swiper-slide {
+        .card-container {
+          width: 80%;
+        }
+        h4 {
+          font-size: 36px;
+          font-family: "Metropolis-Bold";
+          line-height: 1.5;
+          margin-bottom: 38px;
+        }
+        p {
+          font-size: 16px;
+          font-family: "Metropolis-Regular";
+          margin-bottom: 52px;
+        }
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          width: 86%;
+          a {
+            font-family: "Metropolis-Medium", sans-serif;
+            font-size: 18px;
+            border-radius: 30px;
+            border: solid 2px #efefef;
+            width: 200px;
+            padding: 14px 0;
+            transform: 0.3s;
+            text-align: center;
+            &:hover {
+              background-color: #000000;
+              color: #fff;
+              border-color: #000000;
+            }
+            &.active {
+              background-color: #000000;
+              color: #fff;
+              border-color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-btn {
+    text-transform: uppercase;
+    font-family: "Metropolis-Medium";
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 74px;
+    border: solid 1px #eaeaea;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    i {
+      opacity: 0.24;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+/*--------------------------------------------------------------
+# faq
+--------------------------------------------------------------*/
+#faq {
+  h3 {
+    font-size: 42px;
+    text-align: center;
+    font-family: "Metropolis-Regular";
+  }
+  .accordion {
+    .accordion-item {
+      border: none;
+      background-color: #f7f7f7;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      .accordion-header {
+        .accordion-button {
+          border-radius: 12px;
+          background-color: #f7f7f7;
+          border: none;
+          outline: none;
+          font-size: 18px;
+          font-family: "Metropolis-Regular";
+          box-shadow: none;
+          color: #000000 !important;
+          &.collapsed {
+            &::after {
+              content: "";
+              width: 12px;
+              height: 2px;
+              background: #000000;
+              position: absolute;
+              right: 40px;
+            }
+            &::before {
+              content: "";
+              width: 12px;
+              height: 2px;
+              right: 40px;
+              transform: rotate(90deg);
+              background: #000000;
+              position: absolute;
+            }
+          }
+          &::after {
+            content: "";
+            width: 12px;
+            height: 2px;
+            background: #000000;
+            position: absolute;
+            right: 40px;
+          }
+          &::before {
+            content: "";
+            width: 12px;
+            height: 2px;
+            right: 40px;
+            background: #000000;
+            position: absolute;
+          }
+        }
+      }
+      .accordion-collapse {
+        &.show {
+          color: #000000;
+        }
+        .accordion-body {
+          padding-left: 40px;
+          padding-bottom: 40px;
+          color: rgba(33, 37, 41, 0.5);
+        }
+      }
+    }
+  }
+}
+/*--------------------------------------------------------------
+# BiziSecenler
+--------------------------------------------------------------*/
+#biziSecenler {
+  background-color: #fafafa;
+  h1 {
+    font-size: 154px;
+    font-family: "Metropolis-Medium";
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Metropolis-Medium";
+    margin-bottom: 42px;
+  }
+  .imgs-container {
+    width: 90%;
+    margin: auto;
+    img {
+      margin: 44px;
+    }
+  }
+}
 
 /*--------------------------------------------------------------
-# Services
+# teklif Side 
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# call option 
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Team Side 
---------------------------------------------------------------*/
-
+#teklif {
+  h3 {
+    font-family: "Metropolis-Medium";
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Metropolis-Regular";
+    margin-bottom: 30px;
+  }
+  form {
+    input,textarea{
+      width: 100%;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      border: none;
+      background-color: #f8f8f8;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: "Metropolis-Regular";
+      color: #171717;
+      &::placeholder {
+        color: rgba(23, 23, 23, 0.377);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    select {
+      width: 100%;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      border: none;
+      background-color: #f8f8f8;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: "Metropolis-Regular";
+      background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%);
+      background-position: calc(100% - 20px) calc(1em + 10px), calc(100% - 15px) calc(1em + 10px);
+      background-size: 5px 5px, 5px 5px, 1px 1.5em;
+      background-repeat: no-repeat;
+      appearance: none;
+      
+      color: #171717;
+      &::placeholder {
+        color: rgba(23, 23, 23, 0.377);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .teklif-btn{
+      border-radius: 12px;
+      display: block;
+      background-color: #000000;
+      color: #fff;
+      font-family: "Metropolis-Medium",sans-serif;
+      padding: 12px 0;
+      text-align: center;
+      position: relative;
+      img{
+        position: absolute;
+        top: calc(50% - 16px);
+        right: 15px;
+      }
+    }
+  }
+}
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
