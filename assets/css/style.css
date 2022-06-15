@@ -44,10 +44,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-html {
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Metropolis-Regular", sans-serif;
   color: #000000;
@@ -919,6 +915,13 @@ section {
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+@media (max-width: 992px) {
+  #blogDetail .swiper-container .blog-Detail-btn-prev {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
 #blogDetail .swiper-container .blog-Detail-btn-prev i {
   font-size: 20px;
   color: #575757;
@@ -947,6 +950,13 @@ section {
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+@media (max-width: 992px) {
+  #blogDetail .swiper-container .blog-Detail-btn-next {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
 #blogDetail .swiper-container .blog-Detail-btn-next i {
   font-size: 20px;
   color: #575757;
@@ -960,6 +970,14 @@ section {
   display: flex;
 }
 
+@media (max-width: 992px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
@@ -971,11 +989,30 @@ section {
   width: 80%;
 }
 
+@media (max-width: 992px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .card-container {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .card-container {
+    width: 90%;
+  }
+}
+
 #blogDetail .swiper-container .blogDetailSwiper .swiper-slide h4 {
   font-size: 36px;
   font-family: "Metropolis-Bold";
   line-height: 1.5;
   margin-bottom: 38px;
+}
+
+@media (max-width: 768px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-slide h4 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
 }
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-slide p {
@@ -992,6 +1029,12 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 86%;
+}
+
+@media (max-width: 768px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons {
+    width: 100%;
+  }
 }
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a {
@@ -1061,6 +1104,13 @@ section {
   font-size: 42px;
   text-align: center;
   font-family: "Metropolis-Regular";
+}
+
+@media (max-width: 768px) {
+  #faq h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 #faq .accordion .accordion-item {
@@ -1159,6 +1209,24 @@ section {
   margin: 44px;
 }
 
+@media (max-width: 1400px) {
+  #biziSecenler .imgs-container img {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #biziSecenler .imgs-container img {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #biziSecenler .imgs-container img {
+    margin: 20px 0px;
+  }
+}
+
 /*--------------------------------------------------------------
 # teklif Side 
 --------------------------------------------------------------*/
@@ -1170,11 +1238,23 @@ section {
   background-size: cover;
 }
 
+@media (max-width: 1200px) {
+  #teklif .form-img {
+    width: 90%;
+  }
+}
+
 #teklif h3 {
   font-family: "Metropolis-Medium";
   font-size: 42px;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  #teklif h3 {
+    font-size: 30px;
+  }
 }
 
 #teklif p {

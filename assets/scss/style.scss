@@ -40,9 +40,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-html {
-  overflow-x: hidden;
-}
+
 
 body {
   font-family: "Metropolis-Regular", sans-serif;
@@ -644,7 +642,7 @@ section {
     border-radius: 30px;
     position: relative;
     transition: 0.3s;
-    
+
     &:hover {
       background-color: #eaeaea;
     }
@@ -677,6 +675,10 @@ section {
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include lg {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -696,6 +698,10 @@ section {
       border: solid #ffffff 3px;
       background-color: #f7f7f7;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include lg {
+        position: static;
+        margin: 10px 20px;
+      }
       i {
         font-size: 20px;
         color: rgb(87, 87, 87);
@@ -707,6 +713,9 @@ section {
         position: relative;
         margin-top: 30px;
         display: flex;
+        @include lg {
+          justify-content: center;
+        }
         .swiper-pagination-bullet {
           width: 16px;
           height: 16px;
@@ -717,12 +726,22 @@ section {
       .swiper-slide {
         .card-container {
           width: 80%;
+          @include lg {
+            margin: auto;
+          }
+          @include sm {
+            width: 90%;
+          }
         }
         h4 {
           font-size: 36px;
           font-family: "Metropolis-Bold";
           line-height: 1.5;
           margin-bottom: 38px;
+          @include md {
+            margin-bottom: 24px;
+            font-size: 28px;
+          }
         }
         p {
           font-size: 16px;
@@ -733,6 +752,9 @@ section {
           display: flex;
           justify-content: space-between;
           width: 86%;
+          @include md {
+            width: 100%;
+          }
           a {
             font-family: "Metropolis-Medium", sans-serif;
             font-size: 18px;
@@ -792,6 +814,10 @@ section {
     font-size: 42px;
     text-align: center;
     font-family: "Metropolis-Regular";
+    @include md{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
   .accordion {
     .accordion-item {
@@ -880,6 +906,15 @@ section {
     margin: auto;
     img {
       margin: 44px;
+      @include xxl{
+        margin: 30px;
+      }
+      @include xl{
+        margin: 20px;
+      }
+      @include lg{
+        margin: 20px 0px;
+      }
     }
   }
 }
@@ -893,11 +928,20 @@ section {
   background-position: 0px 150px;
   background-repeat: no-repeat;
   background-size: cover;
+  .form-img{
+    @include xl{
+      width: 90%;
+    }
+  
+  }
   h3 {
     font-family: "Metropolis-Medium";
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    @include md{
+      font-size: 30px;
+    }
   }
   p {
     font-size: 18px;
