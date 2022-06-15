@@ -41,7 +41,6 @@
 # General
 --------------------------------------------------------------*/
 
-
 body {
   font-family: "Metropolis-Regular", sans-serif;
   color: #000000;
@@ -81,6 +80,16 @@ section {
 # Header
 --------------------------------------------------------------*/
 #header {
+  @include lg {
+    &.mobile {
+    
+      nav {
+        height: 400px;
+       
+      }
+    }
+  }
+
   top: 0;
   z-index: 99;
   position: fixed;
@@ -90,16 +99,55 @@ section {
   height: 120px;
   display: flex;
   align-items: center;
-
-  .logo {
-    position: absolute;
-    left: 40px;
+  @include lg {
+    min-height: 120px;
+    height: auto;
   }
-
+  .navbar-toggle {
+    font-size: 36px;
+  }
+  .logo {
+    padding-left: 40px;
+    @include lg {
+      padding: 0;
+    }
+  }
+  .btn-teklif {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Metropolis-Bold", sans-serif;
+    background-color: #000000;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 8px;
+    margin-right: 74px;
+    @include xxl {
+      margin-right: 40px;
+      padding: 14px 12px;
+    }
+  }
+  .navbar-container {
+    width: 1210px;
+    @media (max-width: 1550px) {
+      width: 900px;
+    }
+    @include lg {
+      width: auto;
+      flex-basis: 100%;
+      overflow: hidden;
+    }
+  }
   nav {
+    transition: 0.5s;
+    @include lg{
+      height: 0px;
+    }
     .navbar {
       li {
         margin: 0 4px;
+        @include lg {
+          margin: 8px 4px;
+        }
         a {
           text-transform: uppercase;
           font-family: "Metropolis-Medium", sans-serif;
@@ -108,6 +156,9 @@ section {
           border-radius: 10px;
           display: block;
           color: #4b4b4b;
+          @media (max-width: 1550px) {
+            padding: 10px;
+          }
           &.active {
             background-color: #ebebeb;
             color: #000000;
@@ -125,6 +176,9 @@ section {
     border-radius: 24px;
     width: 240px;
     padding: 10px 0 10px 16px;
+    @include xxl {
+      width: 160px;
+    }
     i {
       font-size: 22px;
       color: rgba(0, 0, 0, 0.26);
@@ -488,16 +542,16 @@ section {
           flex-direction: column;
           align-items: flex-end;
           justify-content: space-between;
-          @include md{
-           align-items: center;
-           height: 240px;
+          @include md {
+            align-items: center;
+            height: 240px;
           }
           h4 {
             font-size: 22px;
             font-family: "Metropolis-Medium", sans-serif;
             text-transform: uppercase;
             align-self: flex-start;
-            @include md{
+            @include md {
               align-self: center;
             }
           }
@@ -821,7 +875,7 @@ section {
     font-size: 42px;
     text-align: center;
     font-family: "Metropolis-Regular";
-    @include md{
+    @include md {
       font-size: 30px;
       margin-bottom: 20px;
     }
@@ -901,7 +955,7 @@ section {
     font-size: 154px;
     font-family: "Metropolis-Medium";
     text-align: center;
-    @include lg{
+    @include lg {
       font-size: 100px;
     }
   }
@@ -910,12 +964,12 @@ section {
     font-size: 48px;
     font-family: "Metropolis-Medium";
     margin-bottom: 42px;
-    @include lg{
+    @include lg {
       font-size: 30px;
     }
   }
-  .biziSecenlerSwiper{
-    .swiper-slide{
+  .biziSecenlerSwiper {
+    .swiper-slide {
       text-align: center;
     }
   }
@@ -924,13 +978,13 @@ section {
     margin: auto;
     img {
       margin: 44px;
-      @include xxl{
+      @include xxl {
         margin: 30px;
       }
-      @include xl{
+      @include xl {
         margin: 20px;
       }
-      @include lg{
+      @include lg {
         margin: 20px 0px;
       }
     }
@@ -946,18 +1000,17 @@ section {
   background-position: 0px 150px;
   background-repeat: no-repeat;
   background-size: cover;
-  .form-img{
-    @include xl{
+  .form-img {
+    @include xl {
       width: 90%;
     }
-  
   }
   h3 {
     font-family: "Metropolis-Medium";
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 30px;
-    @include md{
+    @include md {
       font-size: 30px;
     }
   }

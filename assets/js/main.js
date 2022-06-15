@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+    // Mobile navclick 
+    $(".navbar-toggle").click(function (e) { 
+        e.preventDefault();
+        $("#header").toggleClass("mobile");
+    });
+
+
     // Hero Swiper kod kısmı
     var heroSwiper = new Swiper(".heroSwiper", {
         fadeEffect: { crossFade: true },

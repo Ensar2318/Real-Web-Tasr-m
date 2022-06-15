@@ -101,13 +101,89 @@ section {
           align-items: center;
 }
 
+@media (max-width: 992px) {
+  #header.mobile nav {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  #header {
+    min-height: 120px;
+    height: auto;
+  }
+}
+
+#header .navbar-toggle {
+  font-size: 36px;
+}
+
 #header .logo {
-  position: absolute;
-  left: 40px;
+  padding-left: 40px;
+}
+
+@media (max-width: 992px) {
+  #header .logo {
+    padding: 0;
+  }
+}
+
+#header .btn-teklif {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Metropolis-Bold", sans-serif;
+  background-color: #000000;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 8px;
+  margin-right: 74px;
+}
+
+@media (max-width: 1400px) {
+  #header .btn-teklif {
+    margin-right: 40px;
+    padding: 14px 12px;
+  }
+}
+
+#header .navbar-container {
+  width: 1210px;
+}
+
+@media (max-width: 1550px) {
+  #header .navbar-container {
+    width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  #header .navbar-container {
+    width: auto;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    overflow: hidden;
+  }
+}
+
+#header nav {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 992px) {
+  #header nav {
+    height: 0px;
+  }
 }
 
 #header nav .navbar li {
   margin: 0 4px;
+}
+
+@media (max-width: 992px) {
+  #header nav .navbar li {
+    margin: 8px 4px;
+  }
 }
 
 #header nav .navbar li a {
@@ -118,6 +194,12 @@ section {
   border-radius: 10px;
   display: block;
   color: #4b4b4b;
+}
+
+@media (max-width: 1550px) {
+  #header nav .navbar li a {
+    padding: 10px;
+  }
 }
 
 #header nav .navbar li a.active {
@@ -135,6 +217,12 @@ section {
   border-radius: 24px;
   width: 240px;
   padding: 10px 0 10px 16px;
+}
+
+@media (max-width: 1400px) {
+  #header .search {
+    width: 160px;
+  }
 }
 
 #header .search i {
