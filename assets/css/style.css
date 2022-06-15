@@ -191,7 +191,7 @@ section {
 
 #hero .heroSwiper .swiper-pagination {
   position: relative;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 #hero .heroSwiper .swiper-pagination .swiper-pagination-bullet {
@@ -204,12 +204,312 @@ section {
 /*--------------------------------------------------------------
 # client
 --------------------------------------------------------------*/
+#whatWeDo {
+  padding-top: 250px;
+  background-color: #fafafa;
+}
+
+#whatWeDo h3 {
+  font-family: "Metropolis-Medium";
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#whatWeDo ol {
+  margin-bottom: 30px;
+}
+
+#whatWeDo ol li {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 42px;
+  border-radius: 10px;
+  border: #eaeaea 2px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: none;
+}
+
+#whatWeDo ol li:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#whatWeDo ol li.active {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#whatWeDo .swiper-container {
+  position: relative;
+}
+
+#whatWeDo .swiper-container .what-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+#whatWeDo .swiper-container .what-btn-prev i {
+  font-size: 20px;
+  color: #fff;
+}
+
+#whatWeDo .swiper-container .what-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+#whatWeDo .swiper-container .what-btn-next i {
+  font-size: 20px;
+  color: #fff;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide.remove {
+  display: none;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide .img-body {
+  position: relative;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide .img-body:hover .img-content {
+  opacity: 1;
+  bottom: 10px;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  right: 20px;
+  bottom: -100px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h4 {
+  font-size: 24px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+#whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
+  font-size: 18px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#whatWeDo .btn-container {
+  margin-top: 70px;
+}
+
+#whatWeDo .btn-container .all-product-btn {
+  font-family: "Metropolis-Medium";
+  border-radius: 30px;
+  border: solid #eaeaea 1px;
+  padding: 16px 0px 16px 40px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+#whatWeDo .btn-container .all-product-btn:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+#whatWeDo .btn-container .all-product-btn:hover i {
+  color: #fff;
+}
+
+#whatWeDo .btn-container .all-product-btn i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: rgba(0, 0, 0, 0.24);
+  font-size: 22px;
+  padding: 0 20px 0 20px;
+}
+
 /*--------------------------------------------------------------
-# About us
+# What Else We Do Side
 --------------------------------------------------------------*/
+#WhatElseWeDoSide h3 {
+  font-family: "Metropolis-Medium";
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#WhatElseWeDoSide .swiper-container {
+  position: relative;
+}
+
+#WhatElseWeDoSide .swiper-container .what-else-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+}
+
+#WhatElseWeDoSide .swiper-container .what-else-btn-prev i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#WhatElseWeDoSide .swiper-container .what-else-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+}
+
+#WhatElseWeDoSide .swiper-container .what-else-btn-next i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#WhatElseWeDoSide .swiper-container .whatElseWeDoSwiper {
+  padding: 14px;
+}
+
+#WhatElseWeDoSide .swiper-container .whatElseWeDoSwiper .swiper-slide .what-card {
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 256px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#WhatElseWeDoSide .swiper-container .whatElseWeDoSwiper .swiper-slide .what-card h4 {
+  font-size: 22px;
+  font-family: "Metropolis-Medium", sans-serif;
+  text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 /*--------------------------------------------------------------
-# Faq accordion
+# Blog Side
 --------------------------------------------------------------*/
+#blog h3 {
+  font-family: "Metropolis-Medium";
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
