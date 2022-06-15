@@ -488,11 +488,18 @@ section {
           flex-direction: column;
           align-items: flex-end;
           justify-content: space-between;
+          @include md{
+           align-items: center;
+           height: 240px;
+          }
           h4 {
             font-size: 22px;
             font-family: "Metropolis-Medium", sans-serif;
             text-transform: uppercase;
             align-self: flex-start;
+            @include md{
+              align-self: center;
+            }
           }
         }
       }
@@ -894,12 +901,23 @@ section {
     font-size: 154px;
     font-family: "Metropolis-Medium";
     text-align: center;
+    @include lg{
+      font-size: 100px;
+    }
   }
   h3 {
     text-align: center;
     font-size: 48px;
     font-family: "Metropolis-Medium";
     margin-bottom: 42px;
+    @include lg{
+      font-size: 30px;
+    }
+  }
+  .biziSecenlerSwiper{
+    .swiper-slide{
+      text-align: center;
+    }
   }
   .imgs-container {
     width: 90%;

@@ -135,8 +135,8 @@ $(document).ready(function() {
     });
     //Blog swiper kısmı
 
-     //Blog Detail swiper kısmı
-     var blogDetail = new Swiper(".blogDetailSwiper", {
+    //Blog Detail swiper kısmı
+    var blogDetail = new Swiper(".blogDetailSwiper", {
         slidesPerView: 1,
         speed: 1000,
         spaceBetween: 20,
@@ -155,6 +155,46 @@ $(document).ready(function() {
 
     });
     //Blog Detail swiper kısmı
+
+    // bizi secenler kod kısmı
+    var biziSecenlerSwiper = new Swiper(".biziSecenlerSwiper", {
+        slidesPerView: 1,
+        slidesPerColumnFill: 'column',
+        speed: 1000,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".blog-Detail-btn-next",
+            prevEl: ".blog-Detail-btn-prev",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+
+            299: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 30
+            },
+            500: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            },
+
+            800: {
+                slidesPerView: 4,
+                spaceBetweenSlides: 40
+            },
+
+        }
+
+    });
+    // bizi secenler kod kısmı
+
 
 
 
