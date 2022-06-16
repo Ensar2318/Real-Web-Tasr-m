@@ -6,6 +6,10 @@ $(document).ready(function() {
         $("#header").toggleClass("mobile");
     });
 
+    $(".navbar-container").click(function (e) { 
+        e.preventDefault();
+        
+    });
 
     // Hero Swiper kod kısmı
     var heroSwiper = new Swiper(".heroSwiper", {
