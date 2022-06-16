@@ -5,11 +5,7 @@ $(document).ready(function() {
         e.preventDefault();
         $("#header").toggleClass("mobile");
     });
-
-    $(".navbar-container").click(function (e) { 
-        e.stopPropagation();
-        
-    });
+    
 
     // Hero Swiper kod kısmı
     var heroSwiper = new Swiper(".heroSwiper", {
