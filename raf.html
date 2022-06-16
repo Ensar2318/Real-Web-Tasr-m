@@ -1,69 +1,85 @@
-<section id="whatWeDo">
-        <div class="container">
-                <h3>neler yapıyoruz?</h3>
-                <ol id="myTab" role="tablist" class="d-flex justify-content-between nav nav-tabs">
-                        <li role="presentation"> <button data-bs-toggle="tab" data-bs-target="#all-tab-pane"
-                                        type="button" role="tab" aria-controls="home-tab-pane"
-                                        aria-selected="true">Tümü</button></li>
+<!-- =========== Header Side =========== -->
+<header id="header">
+  <div
+    class="p-lg-0 px-5 pt-4 pt-lg-0 container-fluid justify-content-xl-between justify-content-lg-around justify-content-between d-flex align-items-center flex-wrap flex-lg-nowrap">
+    <div class="logo order-0 ">
+      <img src="assets/img/logo.png" alt="gerçek web tasarım">
+    </div>
+    <div class="d-block d-lg-flex align-items-center navbar-container order-3 ">
+      <nav class="d-block d-lg-flex d-lg-flex pt-4 pt-lg-0">
+        <ol class="navbar flex-column flex-lg-row d-lg-flex d-block">
+          <li><a class="active" href="">anasayfa</a></li>
+          <li><a href="">hakkımızda</a></li>
+          <li class="dropdown">
+            <a href="JavaScript:Void(0)">Hizmetlerimiz</a>
+            <ul class="dropdown-content">
+              <li><a href="">Web Tasarım</a></li>
+              <li><a href="">Web Yazılım</a></li>
+              <li><a href="">Kurumsal SEO</a></li>
+              <li><a href="">E-Ticaret</a></li>
+              <li><a href="">Reklam Yönetimi</a></li>
+              <li><a href="">Sosyal Medya</a></li>
+              <li><a href="">Kurumsal Kimlik</a></li>
+              <li><a href="">Logo</a></li>
 
-                        <li role="presentation"> <button class="active" data-bs-toggle="tab"
-                                        data-bs-target="#web-tab-pane" type="button" role="tab"
-                                        aria-controls="web-tab-pane" aria-selected="true">Website</button></li>
+            </ul>
+          </li>
+          <li><a href="">Referanslar</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">İletişim</a></li>
+        </ol>
+      </nav>
 
-                        <li role="presentation"> <button data-bs-toggle="tab" data-bs-target="#logo-tab-pane"
-                                        type="button" role="tab" aria-controls="home-tab-pane"
-                                        aria-selected="true">Logo</button></li>
+      <div class="d-none d-lg-flex ms-auto align-items-center search">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="ARA">
+      </div>
+    </div>
+    <i class="bi bi-list navbar-toggle d-block d-lg-none order-2 "></i>
+    <a class="btn-teklif d-none d-xl-block order-5" href="#">Teklif Al</a>
 
-                        <li role="presentation"> <button data-bs-toggle="tab" data-bs-target="#kurumsal-tab-pane"
-                                        type="button" role="tab" aria-controls="home-tab-pane"
-                                        aria-selected="true">Kurumsal
-                                        Kimlik</button></li>
+</header>
+<!-- Header Side END -->
 
-                        <li role="presentation"> <button data-bs-toggle="tab" data-bs-target="#sosyal-tab-pane"
-                                        type="button" role="tab" aria-controls="home-tab-pane"
-                                        aria-selected="true">Sosyal
-                                        Medya</button></li>
+<!-- =========== Header Side pages =========== -->
+<header id="header">
+  <div
+    class="p-lg-0 px-5 pt-4 pt-lg-0 container-fluid justify-content-xl-between justify-content-lg-around justify-content-between d-flex align-items-center flex-wrap flex-lg-nowrap">
+    <div class="logo order-0 ">
+     <a href="index.html"> <img src="assets/img/logo.png" alt="gerçek web tasarım"></a>
+    </div>
+    <div class="d-block d-lg-flex align-items-center navbar-container order-3 ">
+      <nav class="d-block d-lg-flex d-lg-flex pt-4 pt-lg-0">
+        <ol class="navbar flex-column flex-lg-row d-lg-flex d-block">
+          <li><a class="active" href="index.html">anasayfa</a></li>
+          <li><a href="about-us.html">hakkımızda</a></li>
+          <li class="dropdown">
+            <a href="JavaScript:Void(0)">Bütün Sayfalar</a>
+            <ul class="dropdown-content">
+              <li><a href="services.html">Hizmetler</a></li>
+              <li><a href="services-detail.html">Hizmet Detay</a></li>
+              <li><a href="references.html">Referanslar</a></li>
+              <li><a href="references-detail.html">Referenslar Detay</a></li>
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="blog-detail.html">Blog Detay</a></li>
 
-                        <li role="presentation"> <button data-bs-toggle="tab" data-bs-target="#reklam-tab-pane"
-                                        type="button" role="tab" aria-controls="home-tab-pane"
-                                        aria-selected="true">Reklam
-                                        Yönetimi</button></li>
-                </ol>
+            </ul>
+          </li>
+          <li><a href="references.html">Referanslar</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ol>
+      </nav>
 
-                <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade " id="all-tab-pane" role="tabpanel" tabindex="0">All</div>
-                        <div class="tab-pane fade show active" id="web-tab-pane" role="tabpanel" tabindex="0">Website
-                        </div>
-                        <div class="tab-pane fade" id="logo-tab-pane" role="tabpanel" tabindex="0">Logo</div>
-                        <div class="tab-pane fade" id="kurumsal-tab-pane" role="tabpanel" tabindex="0">Kurumsal</div>
-                        <div class="tab-pane fade" id="sosyal-tab-pane" role="tabpanel" tabindex="0">Sosyal</div>
-                        <div class="tab-pane fade" id="reklam-tab-pane" role="tabpanel" tabindex="0">Reklam</div>
-                </div>
-        </div>
-</section>
+      <div class="d-none d-lg-flex ms-auto align-items-center search">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="ARA">
+      </div>
+    </div>
+    <i class="bi bi-list navbar-toggle d-block d-lg-none order-2 "></i>
+    <a class="btn-teklif d-none d-xl-block order-5" href="#">Teklif Al</a>
 
-<!-- 
-  ol {
-    border: none;
-    li button {
-      cursor: pointer;
-      text-transform: uppercase;
-      padding: 12px 42px;
-      border-radius: 10px;
-      border: #eaeaea 2px solid;
-      transition: 0.3s;
-      background: none;
-      &:hover {
-        background-color: $defaultBlack;
-        color: #fff;
-        border-color: $defaultBlack;
-      }
-      &.active {
-        background-color: $defaultBlack;
-        color: #fff;
-        border-color: $defaultBlack;
-      }
-    }
-  }
-
- -->
+</header>
+<!-- Header Side END -->
