@@ -971,6 +971,9 @@ section {
           font-family: "Metropolis-Regular";
           box-shadow: none;
           color: #000000 !important;
+          @include sm{
+            padding-right: 50px;
+          }
           &.collapsed {
             &::after {
               content: "";

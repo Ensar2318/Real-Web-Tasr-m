@@ -1333,6 +1333,12 @@ section {
   color: #000000 !important;
 }
 
+@media (max-width: 576px) {
+  #faq .accordion .accordion-item .accordion-header .accordion-button {
+    padding-right: 50px;
+  }
+}
+
 #faq .accordion .accordion-item .accordion-header .accordion-button.collapsed::after {
   content: "";
   width: 12px;
