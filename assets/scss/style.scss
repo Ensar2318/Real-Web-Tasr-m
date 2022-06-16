@@ -82,6 +82,7 @@ section {
 #header {
   @include lg {
     &.mobile {
+     
       .navbar-container {
         height: 380px;
         overflow: auto;
@@ -99,8 +100,12 @@ section {
   display: flex;
   align-items: center;
   @include lg {
-    min-height: 120px;
     height: auto;
+  }
+  .container-fluid{
+    @include lg{
+      padding: 20px 0;
+    }
   }
   .navbar-toggle {
     font-size: 36px;
@@ -129,7 +134,7 @@ section {
     width: 1210px;
     transition: 0.3s;
     @media (max-width: 1550px) {
-      width: 960px;
+      width: 1000px;
     }
     @include lg {
       width: auto;

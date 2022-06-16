@@ -111,8 +111,13 @@ section {
 
 @media (max-width: 992px) {
   #header {
-    min-height: 120px;
     height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  #header .container-fluid {
+    padding: 20px 0;
   }
 }
 
@@ -156,7 +161,7 @@ section {
 
 @media (max-width: 1550px) {
   #header .navbar-container {
-    width: 960px;
+    width: 1000px;
   }
 }
 
