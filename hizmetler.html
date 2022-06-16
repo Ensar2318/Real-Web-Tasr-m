@@ -41,25 +41,25 @@
       <nav class="d-block d-lg-flex d-lg-flex pt-4 pt-lg-0">
         <ol class="navbar flex-column flex-lg-row d-lg-flex d-block">
           <li><a class="active" href="index.html">anasayfa</a></li>
-          <li><a href="about-us.html">hakkımızda</a></li>
+          <li><a href="hakkimizda.html">hakkımızda</a></li>
           <li class="dropdown">
             <a href="JavaScript:Void(0)">Bütün Sayfalar</a>
             <ul class="dropdown-content">
-              <li><a href="services.html">Hizmetler</a></li>
-              <li><a href="services-detail.html">Hizmet Detay</a></li>
-              <li><a href="references.html">Referanslar</a></li>
-              <li><a href="references-detail.html">Referenslar Detay</a></li>
+              <li><a href="hizmetler.html">Hizmetler</a></li>
+              <li><a href="hizmet-detay.html">Hizmet Detay</a></li>
+              <li><a href="referanslar.html">Referanslar</a></li>
+              <li><a href="referans-detay.html">Referenslar Detay</a></li>
               <li><a href="index.html">Anasayfa</a></li>
-              <li><a href="contact.html">İletişim</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
               <li><a href="blog.html">Blog</a></li>
-              <li><a href="about-us.html">Hakkımızda</a></li>
-              <li><a href="blog-detail.html">Blog Detay</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="blog-detay.html">Blog Detay</a></li>
 
             </ul>
           </li>
-          <li><a href="references.html">Referanslar</a></li>
+          <li><a href="referanslar.html">Referanslar</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ol>
       </nav>
 
@@ -73,97 +73,105 @@
 
 </header>
     <!-- Header Side END -->
-
-    <!-- Contact Side START -->
-    <section id="contact">
+    <section id="services">
         <div class="container">
-            <h3>İLETİŞİM</h3>
+            <h3>HİZMETLERİMİZ</h3>
+            <ol id="myTab" role="tablist"
+                class="d-flex justify-content-lg-between justify-content-center flex-wrap flex-lg-nowrap">
+                <li class="active" filter="*">Tümü</li>
+                <li filter=".website">Website</li>
+                <li filter=".logo">Logo</li>
+                <li filter=".kurumsal">Kurumsal Kimlik</li>
+                <li filter=".sosyal">Sosyal Medya</li>
+                <li filter=".rek">Reklam Yönetimi</li>
+            </ol>
 
-            <div class="row gy-5 gy-lg-0">
-                <div class="col-lg-6 order-1 order-lg-0">
-                    <h2>Bize Yazın</h2>
-                    <form>
-                        <input type="text" placeholder="İsim ve Soyisminiz">
-                        <input type="text" placeholder="Telefonunuz">
-                        <input type="text" placeholder="Eposta Adresiniz">
-                        <textarea rows="6" placeholder="Belirtmek İstedikleriniz"></textarea>
-                        <a class="teklif-btn" href="#">Teklifinizi Gönderin <img src="assets/img/left.png"></a>
-                    </form>
+            <div class="row gy-5 justify-content-lg-start justify-content-center servicesIsotope">
+
+                <!-- 1. üçlü -->
+                <div class="col-xl-4 col-md-6 website ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB TASARIM</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-lg-end justify-content-lg-end order-0 order-lg-1">
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4256.928348455658!2d28.935772967613016!3d41.0230046044686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba26ff3c7445%3A0x94a235fcfc37ba4f!2zVC5DLiBGYXRpaCBLYXltYWthbWzEscSfxLE!5e0!3m2!1sen!2str!4v1655375417982!5m2!1sen!2str"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="col-xl-4 col-md-6 logo ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB YAZILIM</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col-xl-4 col-md-6 kurumsal ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB PANEL</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1. üçlü -->
+
+                  <!-- 2. üçlü -->
+                  <div class="col-xl-4 col-md-6 sosyal ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB BANNER</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6 rek ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB BACKEND</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-6 website ilksira">
+                    <div class="blog-card">
+                        <div class="card-head">
+                            <img class="img-fluid" src="assets/img/blog/img-1.png">
+                        </div>
+                        <div class="card-body">
+                            <h4>WEB PROGRAMLAMA</h4>
+                            <a href="#">Teklif Al <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. üçlü -->
+
             </div>
-            <div class="row contact-details g-3 justify-content-center justify-content-xxl-center">
-
-                <div class="col-xxl col-lg-4 col-sm-6">
-                    <div class="contact-card">
-                        <div class="icon-title">
-                            <img class="img-fluid" src="assets/img/contact-icons/mail.png">
-                            <span>Eposta</span>
-                        </div>
-                        <p>info@realwebtasarim.com</p>
-                    </div>
-                </div>
-
-                <div class="col-xxl col-lg-4 col-sm-6">
-                    <div class="contact-card">
-                        <div class="icon-title">
-                            <img class="img-fluid" src="assets/img/contact-icons/call.png">
-                            <span>Telefon</span>
-                        </div>
-                        <p>0850 305 02 39</p>
-                    </div>
-                </div>
-
-                <div class="col-xxl col-lg-4 col-sm-6">
-                    <div class="contact-card">
-                        <div class="icon-title">
-                            <img class="img-fluid" src="assets/img/contact-icons/map.png">
-                            <span>Adres</span>
-                        </div>
-                        <p>Siyavuşpaşa Mah. Ali Fuat
-                            Paşa Cd. No:11 D:3 Tüfekçi
-                            Apt. Bahçelievler / İstanbul</p>
-                    </div>
-                </div>
-
-                <div class="col-xxl col-lg-4 col-sm-6">
-                    <div class="contact-card">
-                        <div class="icon-title">
-                            <img class="img-fluid" src="assets/img/contact-icons/bag.png">
-                            <span>Çalışma Saatleri</span>
-                        </div>
-                        <p class="mt-4">Pazartesi - Cuma</p>
-                        <p>08:00 - 18:00</p>
-                    </div>
-                </div>
 
 
-                <div class="col-xxl col-lg-4 col-sm-6">
-                    <div class="contact-card">
-                        <div class="icon-title">
-                            <img class="img-fluid" src="assets/img/contact-icons/social.png">
-                            <span>Sosyal Ağlar</span>
-                        </div>
-                        <div class="social-medias justify-content-center justify-content-md-start">
-                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
+            <!-- <div class="text-center btn-container">
+                <a class="all-product-btn" href="#">Daha fazla görüntüle <i class="fa-solid fa-angle-right"></i></a>
+            </div> -->
         </div>
     </section>
-    <!-- Contact Side END -->
-
     <!-- =========== Footer Side =========== -->
     <footer id="footer">
         <div class="container">

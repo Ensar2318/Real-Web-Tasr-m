@@ -204,7 +204,7 @@ $(document).ready(function() {
     // bizi secenler kod kısmı
 
 
-    // References.html referans filtreleme ve ISOTOPE kısmı
+    // referanslar.html referans filtreleme ve ISOTOPE kısmı
 
     //  İsotope tanımlama
     $refIso = $('.referencesIsotope').isotope({
@@ -284,7 +284,7 @@ $(document).ready(function() {
     });
 
 
-    // services.html services filtreleme ve ISOTOPE kısmı
+    // hizmetler.html services filtreleme ve ISOTOPE kısmı
 
     //  İsotope tanımlama
     $servicesIso = $('.servicesIsotope').isotope({
