@@ -477,6 +477,9 @@ section {
             @include md {
               font-size: 16px;
             }
+            @include sm{
+              font-size: 12px;
+            }
           }
           h5 {
             font-size: 18px;
@@ -489,7 +492,10 @@ section {
               font-size: 14px;
             }
             @include md {
-              font-size: 12p;
+              font-size: 12px;
+            }
+            @include sm{
+              font-size: 10px;
             }
           }
         }
@@ -831,7 +837,7 @@ section {
     .blogDetailSwiper {
       .swiper-pagination {
         position: relative;
-        margin-top: 30px;
+        margin-top: 50px;
         .swiper-pagination-bullet {
           width: 16px;
           height: 16px;
@@ -880,6 +886,10 @@ section {
             padding: 14px 0;
             transform: 0.3s;
             text-align: center;
+            @include sm{
+              width: 140px;
+              font-size: 14px;
+            }
             &:hover {
               background-color: #000000;
               color: #fff;

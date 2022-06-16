@@ -647,6 +647,12 @@ section {
   }
 }
 
+@media (max-width: 576px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h4 {
+    font-size: 12px;
+  }
+}
+
 #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
   font-size: 18px;
   font-family: "Metropolis-Bold", sans-serif;
@@ -664,7 +670,13 @@ section {
 
 @media (max-width: 768px) {
   #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
-    font-size: 12p;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content h5 {
+    font-size: 10px;
   }
 }
 
@@ -1140,7 +1152,7 @@ section {
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination {
   position: relative;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination .swiper-pagination-bullet {
@@ -1212,6 +1224,13 @@ section {
   -webkit-transform: 0.3s;
           transform: 0.3s;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a {
+    width: 140px;
+    font-size: 14px;
+  }
 }
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a:hover {
