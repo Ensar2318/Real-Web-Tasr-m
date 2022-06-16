@@ -209,7 +209,7 @@ $(document).ready(function() {
     //  İsotope tanımlama
     $refIso = $('.referencesIsotope').isotope({
         itemSelector: '.col-12',
-        filter: ".ilksira"
+        filter: "*"
     });
 
 
@@ -287,7 +287,7 @@ $(document).ready(function() {
     // services.html services filtreleme ve ISOTOPE kısmı
 
     //  İsotope tanımlama
-    $refIso = $('.servicesIsotope').isotope({
+    $servicesIso = $('.servicesIsotope').isotope({
         itemSelector: '.col-xl-4',
         filter: ".ilksira"
     });
@@ -298,7 +298,7 @@ $(document).ready(function() {
         $("#services ol li").removeClass("active");
         $(this).addClass("active");
         let filteredValue = $(this).attr("filter");
-        $refIso.isotope({
+        $servicesIso.isotope({
             filter: filteredValue
         });
     });
@@ -306,7 +306,7 @@ $(document).ready(function() {
 
     $("#services .all-product-btn").click(function(e) {
         e.preventDefault();
-        $refIso.isotope({
+        $servicesIso.isotope({
             filter: "*"
         });
     });
