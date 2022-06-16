@@ -82,10 +82,9 @@ section {
 #header {
   @include lg {
     &.mobile {
-    
-      nav {
-        height: 400px;
-       
+      .navbar-container {
+        height: 380px;
+        overflow: auto;
       }
     }
   }
@@ -128,19 +127,66 @@ section {
   }
   .navbar-container {
     width: 1210px;
+    transition: 0.3s;
     @media (max-width: 1550px) {
-      width: 900px;
+      width: 960px;
     }
     @include lg {
       width: auto;
       flex-basis: 100%;
       overflow: hidden;
+      height: 0;
     }
   }
   nav {
     transition: 0.5s;
-    @include lg{
-      height: 0px;
+    @include lg {
+      overflow: auto;
+    }
+    .dropdown {
+      position: relative;
+      &:hover {
+        & > a {
+          background-color: #ebebeb;
+          font-family: "Metropolis-Medium";
+          color: #4b4b4b;
+        }
+        .dropdown-content {
+          opacity: 1;
+          visibility: visible;
+          top: 64px;
+          display: block;
+        }
+      }
+      .dropdown-content {
+        position: absolute;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        top: 120px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        @include lg {
+          position: static;
+          display: none;
+          opacity: 1;
+          visibility: visible;
+        }
+        li a {
+          display: block;
+          font-family: "Metropolis-Medium", sans-serif;
+          font-size: 16px;
+          text-transform: capitalize;
+          padding: 8px 0 8px 22px;
+          margin: 4px 0;
+          &:hover {
+            background-color: #000000;
+            color: #fff;
+          }
+        }
+      }
     }
     .navbar {
       li {
@@ -196,6 +242,11 @@ section {
     }
   }
 }
+
+/*--------------------------------------------------------------
+############### İndex.HTML CSS KODLARI START ###############
+--------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -720,6 +771,14 @@ section {
 # BlogDetail
 --------------------------------------------------------------*/
 #blogDetail {
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    margin-top: 130px;
+  }
   .swiper-container {
     position: relative;
     .blog-Detail-btn-prev {
@@ -773,10 +832,6 @@ section {
       .swiper-pagination {
         position: relative;
         margin-top: 30px;
-        display: flex;
-        @include lg {
-          justify-content: center;
-        }
         .swiper-pagination-bullet {
           width: 16px;
           height: 16px;
@@ -1075,6 +1130,1230 @@ section {
         position: absolute;
         top: calc(50% - 16px);
         right: 15px;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### blog.HTML CSS KODLARI START ###############
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# BlogDetail
+--------------------------------------------------------------*/
+#blogBlogDetail {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  .swiper-container {
+    position: relative;
+    .blog-Detail-btn-prev {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 30px);
+      left: -90px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include lg {
+        position: static;
+        margin: 10px 20px;
+      }
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+    .blog-Detail-btn-next {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 30px);
+      right: -90px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include lg {
+        position: static;
+        margin: 10px 20px;
+      }
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+
+    .blogDetailSwiper {
+      .swiper-pagination {
+        position: relative;
+        margin-top: 30px;
+        .swiper-pagination-bullet {
+          width: 16px;
+          height: 16px;
+          margin: 0 8px;
+          background-color: #a8a8a8;
+        }
+      }
+      .swiper-slide {
+        .card-container {
+          width: 80%;
+          @include lg {
+            margin: auto;
+          }
+          @include sm {
+            width: 90%;
+          }
+        }
+        h4 {
+          font-size: 36px;
+          font-family: "Metropolis-Bold";
+          line-height: 1.5;
+          margin-bottom: 38px;
+          @include md {
+            margin-bottom: 24px;
+            font-size: 28px;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-family: "Metropolis-Regular";
+          margin-bottom: 52px;
+        }
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          width: 86%;
+          @include md {
+            width: 100%;
+          }
+          a {
+            font-family: "Metropolis-Medium", sans-serif;
+            font-size: 18px;
+            border-radius: 30px;
+            border: solid 2px #efefef;
+            width: 200px;
+            padding: 14px 0;
+            transform: 0.3s;
+            text-align: center;
+            &:hover {
+              background-color: #000000;
+              color: #fff;
+              border-color: #000000;
+            }
+            &.active {
+              background-color: #000000;
+              color: #fff;
+              border-color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-btn {
+    text-transform: uppercase;
+    font-family: "Metropolis-Medium";
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 74px;
+    border: solid 1px #eaeaea;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    i {
+      opacity: 0.24;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Blog Listesi
+--------------------------------------------------------------*/
+#blogLists {
+  .blog-card {
+    .card-head {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      background-color: #f5f5f5;
+      padding: 30px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-body {
+      background-color: #fff;
+      padding: 44px;
+      h4 {
+        font-size: 16px;
+        font-family: "Montserrat-Bold", sans-serif;
+        text-transform: uppercase;
+      }
+      .card-body-detail {
+        margin-top: 52px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          @include xxl {
+            padding: 12px 40px 12px 30px;
+          }
+          @include lg {
+            font-size: 14px;
+            padding: 8px 40px 8px 30px;
+          }
+
+          display: flex;
+          align-items: center;
+          font-family: "Montserrat-SemiBold", sans-serif;
+          font-size: 16px;
+          border: solid 1px #e8e8e8;
+          padding: 12px 50px 12px 40px;
+          border-radius: 8px;
+          position: relative;
+          transition: 0.3s;
+          &:hover {
+            background-color: #e8e8e8;
+            color: #fff;
+            i {
+              color: #fff;
+            }
+          }
+          i {
+            transition: 0.3s;
+            color: #cbcbcb;
+            position: absolute;
+            right: 13px;
+          }
+        }
+        .date {
+          display: flex;
+          color: #bcbcbc;
+          align-items: center;
+          i {
+            padding-right: 8px;
+            font-size: 20px;
+          }
+          h6 {
+            color: #bcbcbc;
+            font-family: "Montserrat-SemiBold";
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
+            @include lg {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-btn {
+    text-transform: uppercase;
+    font-family: "Metropolis-Medium";
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 74px;
+    border: solid 1px #eaeaea;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    i {
+      opacity: 0.24;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### blog-detail.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#blogContent {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  h2 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .content {
+    text-align: center;
+    margin-top: 50px;
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  .swiper-container {
+    position: relative;
+    .blog-btn-prev {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 100px);
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include sm {
+        position: static;
+        margin: 10px 20px;
+      }
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+    .blog-btn-next {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 100px);
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      @include sm {
+        position: static;
+        margin: 10px 20px;
+      }
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+
+    .blogSwiper {
+      .swiper-slide {
+        .blog-card {
+          .card-head {
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            background-color: #f5f5f5;
+            padding: 30px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .card-body {
+            background-color: #fff;
+            padding: 44px;
+            h4 {
+              font-size: 16px;
+              font-family: "Montserrat-Bold", sans-serif;
+              text-transform: uppercase;
+            }
+            .card-body-detail {
+              margin-top: 52px;
+              display: flex;
+              justify-content: space-between;
+              a {
+                display: flex;
+                align-items: center;
+                font-family: "Montserrat-SemiBold", sans-serif;
+                font-size: 16px;
+                border: solid 1px #e8e8e8;
+                padding: 12px 50px 12px 40px;
+                border-radius: 8px;
+                position: relative;
+                transition: 0.3s;
+                &:hover {
+                  background-color: #e8e8e8;
+                  color: #fff;
+                  i {
+                    color: #fff;
+                  }
+                }
+                i {
+                  transition: 0.3s;
+                  color: #cbcbcb;
+                  position: absolute;
+                  right: 13px;
+                }
+              }
+              .date {
+                display: flex;
+                color: #bcbcbc;
+                align-items: center;
+                i {
+                  padding-right: 8px;
+                  font-size: 20px;
+                }
+                h6 {
+                  color: #bcbcbc;
+                  font-family: "Montserrat-SemiBold";
+                  font-size: 14px;
+                  margin: 0;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### references.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#references {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+
+  ol {
+    margin-bottom: 30px;
+    li {
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 12px 42px;
+      border-radius: 10px;
+      border: #eaeaea 2px solid;
+      transition: 0.3s;
+      background: none;
+      @include xxl {
+        padding: 10px 30px;
+      }
+      @include xl {
+        padding: 10px 24px;
+      }
+      @include lg {
+        margin: 0px 6px 10px 6px;
+      }
+      @include sm {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
+      &:hover {
+        background-color: $defaultBlack;
+        color: #fff;
+        border-color: $defaultBlack;
+      }
+      &.active {
+        background-color: $defaultBlack;
+        color: #fff;
+        border-color: $defaultBlack;
+      }
+    }
+  }
+  .swiper-container {
+    position: relative;
+    .what-btn-prev {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 40px);
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 2px;
+      backdrop-filter: blur(10px);
+      @include md {
+        position: static;
+        background-color: #bcbcbc;
+        margin: 0 10px;
+      }
+      i {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    .what-btn-next {
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 40px);
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 2px;
+      backdrop-filter: blur(10px);
+      @include md {
+        position: static;
+        background-color: #bcbcbc;
+        margin: 0 10px;
+      }
+      i {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+  .img-body {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .img-content {
+        opacity: 1;
+        bottom: 10px;
+      }
+    }
+    .img-content {
+      backdrop-filter: blur(5px);
+      opacity: 0;
+      transition: 0.5s;
+      position: absolute;
+      z-index: 5;
+      left: 20px;
+      right: 20px;
+      bottom: -100px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      @include xxl {
+        height: 120px;
+      }
+
+      @include sm {
+        padding: 20px;
+        height: 80px;
+      }
+
+      h4 {
+        font-size: 24px;
+        font-family: "Metropolis-Bold", sans-serif;
+        color: #fff;
+        z-index: 2;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+
+        @include sm {
+          font-size: 16px;
+        }
+      }
+      h5 {
+        font-size: 18px;
+        font-family: "Metropolis-Bold", sans-serif;
+        color: #fff;
+        z-index: 2;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include sm {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .btn-container {
+    margin-top: 70px;
+    @include md {
+      margin-top: 30px;
+    }
+    .all-product-btn {
+      font-family: "Metropolis-Medium";
+      border-radius: 30px;
+      border: solid #eaeaea 1px;
+      padding: 16px 0px 16px 40px;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      &:hover {
+        background-color: #eaeaea;
+      }
+      i {
+        transition: 0.3s;
+        color: rgba(0, 0, 0, 0.24);
+        font-size: 22px;
+        padding: 0 20px 0 20px;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### references-detail.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#references-detail {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  .content-title {
+    margin-top: 160px;
+    margin-bottom: 40px;
+  }
+
+  .references-container {
+    @media (max-width: 1500px) {
+      margin: auto;
+      width: 86%;
+    }
+    @include md {
+      width: 94%;
+    }
+    .card-container {
+      width: 80%;
+      padding-top: 60px;
+      @include xxl {
+        padding-top: 0;
+      }
+      @include lg {
+        margin: auto;
+      }
+      @include sm {
+        width: 90%;
+      }
+    }
+    h4 {
+      font-size: 36px;
+      font-family: "Metropolis-Bold";
+      line-height: 1.5;
+      margin-bottom: 38px;
+      @include xl {
+        font-size: 30px;
+      }
+      @include md {
+        margin-bottom: 24px;
+        font-size: 28px;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      font-family: "Metropolis-Bold";
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 16px;
+      font-family: "Metropolis-Regular";
+      margin-bottom: 20px;
+    }
+
+    .prev-btn {
+      position: absolute;
+      left: -90px;
+      z-index: 2;
+      bottom: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md {
+        position: static;
+      }
+    }
+    .next-btn {
+      position: absolute;
+      right: -90px;
+      z-index: 2;
+      bottom: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md {
+        position: static;
+      }
+    }
+    .text-item {
+      font-size: 16px;
+      font-family: "Metropolis-Medium";
+      opacity: 0.24;
+    }
+    .btn-item {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 3px;
+      background-color: #f7f7f7;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin-bottom: 10px;
+      @include lg {
+        position: static;
+        margin: 10px 20px;
+      }
+      i {
+        font-size: 20px;
+        color: rgb(87, 87, 87);
+      }
+    }
+  }
+
+  .swiper-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    .refD-btn-prev {
+      @include sm {
+        position: static;
+        margin: 0 20px;
+      }
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 40px);
+      left: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 2px;
+      background-color: #f7f7f7;
+      i {
+        font-size: 20px;
+        color: rgb(167, 167, 167);
+      }
+    }
+    .refD-btn-next {
+      @include sm {
+        position: static;
+        margin: 0 20px;
+      }
+      position: absolute;
+      z-index: 2;
+      bottom: calc(50% - 40px);
+      right: -30px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      border: solid #ffffff 2px;
+      background-color: #f7f7f7;
+
+      i {
+        font-size: 20px;
+        color: rgb(167, 167, 167);
+      }
+    }
+  }
+
+  .refDigerSwiper {
+    .swiper-slide {
+      &.remove {
+        display: none;
+      }
+      .img-body {
+        position: relative;
+        &:hover {
+          .img-content {
+            opacity: 1;
+            bottom: 10px;
+          }
+        }
+        .img-content {
+          backdrop-filter: blur(5px);
+          opacity: 0;
+          transition: 0.5s;
+          position: absolute;
+          z-index: 5;
+          left: 20px;
+          right: 20px;
+          bottom: -100px;
+          height: 120px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          padding-left: 40px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 12px;
+          @include xxl {
+            height: 120px;
+          }
+          @include lg {
+            height: 80px;
+          }
+          @include md {
+            height: 120px;
+            padding: 20px;
+          }
+
+          h4 {
+            font-size: 24px;
+            font-family: "Metropolis-Bold", sans-serif;
+            color: #fff;
+            z-index: 2;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            @include lg {
+              font-size: 20px;
+            }
+            @include md {
+              font-size: 18px;
+            }
+          }
+          h5 {
+            font-size: 18px;
+            font-family: "Metropolis-Bold", sans-serif;
+            color: #fff;
+            z-index: 2;
+            margin: 0;
+            text-transform: uppercase;
+            @include lg {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .all-btn {
+    text-transform: uppercase;
+    font-family: "Metropolis-Medium";
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 74px;
+    border: solid 1px #eaeaea;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    i {
+      opacity: 0.24;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### Contact.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#contact {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  h2 {
+    font-family: "Montserrat-Medium";
+    font-size: 42px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  form {
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      border: none;
+      background-color: #f8f8f8;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: "Metropolis-Regular";
+      color: #171717;
+      &::placeholder {
+        color: rgba(23, 23, 23, 0.377);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .teklif-btn {
+      border-radius: 12px;
+      display: block;
+      background-color: #000000;
+      color: #fff;
+      font-family: "Metropolis-Medium", sans-serif;
+      padding: 12px 0;
+      text-align: center;
+      position: relative;
+      img {
+        position: absolute;
+        top: calc(50% - 16px);
+        right: 15px;
+      }
+    }
+  }
+  .map {
+    border-radius: 20px;
+    width: 90%;
+    height: 450px;
+    @include lg {
+      width: 100%;
+    }
+  }
+  .contact-details {
+    margin-top: 46px;
+    .contact-card {
+      @include xxl {
+        align-items: center;
+      }
+      @include sm {
+        text-align: center;
+      }
+      background-color: #f8f8f8;
+      border-radius: 20px;
+      height: 170px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        margin: 0;
+        font-family: "Metropolis-Regular";
+        font-size: 15px;
+        @include sm {
+          font-size: 16px;
+        }
+      }
+      .icon-title {
+        display: flex;
+        align-items: center;
+        span {
+          font-family: "Metropolis-SemiBold";
+          font-size: 16px;
+          @include sm {
+            font-size: 18px;
+          }
+        }
+        img {
+          opacity: 0.5;
+          margin-right: 10px;
+        }
+      }
+      .social-medias {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        a {
+          color: #000000;
+          font-size: 24px;
+          & + a {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### About-us.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#aboutUs {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  .content {
+    width: 90%;
+    @include xl {
+      width: 100%;
+    }
+    h2 {
+      font-family: "Metropolis-Medium";
+      font-size: 42px;
+      text-transform: capitalize;
+      margin-bottom: 36px;
+      @include xxl {
+        font-size: 34px;
+      }
+    }
+    p {
+      font-family: "Metropolis-Regular";
+      font-size: 16px;
+      margin-bottom: 26px;
+    }
+  }
+  .aboutUsSwiper {
+    .swiper-slide {
+      @include xl {
+        text-align: center;
+      }
+      img {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+    .swiper-pagination {
+      position: relative;
+      margin-top: 50px;
+
+      .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0 8px;
+        background-color: #a8a8a8;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### Services.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#services {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  .blog-card {
+    .card-head {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      background-color: #f5f5f5;
+      padding: 22px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-body {
+      background-color: #fff;
+      padding: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4 {
+        font-family: "Montserrat-Bold";
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-family: "Montserrat-SemiBold", sans-serif;
+        font-size: 16px;
+        border: solid 1px #e8e8e8;
+        padding: 12px 40px 12px 30px;
+        border-radius: 8px;
+        position: relative;
+        transition: 0.3s;
+        @include xxl {
+          padding: 12px 40px 12px 20px;
+        }
+        &:hover {
+          background-color: #e8e8e8;
+          color: #fff;
+          i {
+            color: #fff;
+          }
+        }
+        i {
+          transition: 0.3s;
+          color: #cbcbcb;
+          position: absolute;
+          right: 13px;
+        }
+      }
+    }
+  }
+
+  ol {
+    margin-bottom: 30px;
+    li {
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 12px 42px;
+      border-radius: 10px;
+      border: #eaeaea 2px solid;
+      transition: 0.3s;
+      background: none;
+      @include xxl {
+        padding: 10px 30px;
+      }
+      @include xl {
+        padding: 10px 24px;
+      }
+      @include lg {
+        margin: 0px 6px 10px 6px;
+      }
+      @include sm {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
+      &:hover {
+        background-color: $defaultBlack;
+        color: #fff;
+        border-color: $defaultBlack;
+      }
+      &.active {
+        background-color: $defaultBlack;
+        color: #fff;
+        border-color: $defaultBlack;
+      }
+    }
+  }
+  .all-product-btn {
+    font-family: "Metropolis-Medium";
+    border-radius: 30px;
+    border: solid #eaeaea 1px;
+    padding: 16px 0px 16px 40px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    &:hover {
+      background-color: #eaeaea;
+    }
+    i {
+      transition: 0.3s;
+      color: rgba(0, 0, 0, 0.24);
+      font-size: 22px;
+      padding: 0 20px 0 20px;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+############### Services.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#services-detail {
+  margin-top: 120px;
+  h3 {
+    font-family: "Montserrat-Medium";
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+  }
+  .content-title {
+    margin-top: 160px;
+    margin-bottom: 40px;
+  }
+
+  .services-container {
+    width: 84%;
+    @include md {
+      width: 94%;
+    }
+    h4 {
+      font-size: 36px;
+      font-family: "Metropolis-Bold";
+      line-height: 1.5;
+      margin-bottom: 38px;
+      @include xl {
+        font-size: 30px;
+      }
+      @include md {
+        margin-bottom: 24px;
+        font-size: 28px;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      font-family: "Metropolis-Bold";
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 16px;
+      font-family: "Metropolis-Regular";
+      margin-bottom: 20px;
+    }
+    .btn-teklif {
+      border-radius: 30px;
+      display: inline-block;
+      background-color: #000000;
+      color: #fff;
+      font-family: "Metropolis-Medium", sans-serif;
+      padding: 12px 60px;
+      margin-top: 30px;
+    }
+  }
+
+  .servicesDetailSwiper {
+    .swiper-slide {
+      @include xl {
+        text-align: center;
+      }
+    }
+    .swiper-pagination {
+      position: relative;
+      margin-top: 50px;
+
+      .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0 8px;
+        background-color: #a8a8a8;
       }
     }
   }

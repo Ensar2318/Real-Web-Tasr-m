@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Mobile navclick 
-    $(".navbar-toggle").click(function (e) { 
+    $(".navbar-toggle").click(function(e) {
         e.preventDefault();
         $("#header").toggleClass("mobile");
     });
@@ -204,6 +204,129 @@ $(document).ready(function() {
     // bizi secenler kod kısmı
 
 
+    // References.html referans filtreleme ve ISOTOPE kısmı
 
+    //  İsotope tanımlama
+    $refIso = $('.referencesIsotope').isotope({
+        itemSelector: '.col-12',
+        filter: ".ilksira"
+    });
+
+
+    $("#references ol li").click(function(e) {
+        e.preventDefault();
+        $("#references ol li").removeClass("active");
+        $(this).addClass("active");
+        let filteredValue = $(this).attr("filter");
+        $refIso.isotope({
+            filter: filteredValue
+        });
+    });
+
+
+    $("#references .all-product-btn").click(function(e) {
+        e.preventDefault();
+        $refIso.isotope({
+            filter: "*"
+        });
+    });
+
+
+    // References Details diğer işler slider tanımlama
+    var refDigerSwiper = new Swiper(".refDigerSwiper", {
+        slidesPerView: 1,
+        slidesPerColumnFill: 'column',
+        speed: 1000,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".refD-btn-next",
+            prevEl: ".refD-btn-prev"
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            780: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 40
+            },
+
+            1200: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            },
+
+        }
+
+    });
+
+
+    // About us slider tanımlama
+    var aboutUsSwiper = new Swiper(".aboutUsSwiper", {
+        slidesPerView: 1,
+        speed: 1000,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+        },
+        watchSlidesVisibility: true,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+
+    });
+
+
+    // services.html services filtreleme ve ISOTOPE kısmı
+
+    //  İsotope tanımlama
+    $refIso = $('.servicesIsotope').isotope({
+        itemSelector: '.col-xl-4',
+        filter: ".ilksira"
+    });
+
+
+    $("#services ol li").click(function(e) {
+        e.preventDefault();
+        $("#services ol li").removeClass("active");
+        $(this).addClass("active");
+        let filteredValue = $(this).attr("filter");
+        $refIso.isotope({
+            filter: filteredValue
+        });
+    });
+
+
+    $("#services .all-product-btn").click(function(e) {
+        e.preventDefault();
+        $refIso.isotope({
+            filter: "*"
+        });
+    });
+
+    
+    // Services-Details slider tanımlama
+    var aboutUsSwiper = new Swiper(".servicesDetailSwiper", {
+        slidesPerView: 1,
+        speed: 1000,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+        },
+        watchSlidesVisibility: true,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+
+    });
 
 });

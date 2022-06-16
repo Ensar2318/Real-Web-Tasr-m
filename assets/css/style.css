@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 # Fonts Variables
 --------------------------------------------------------------*/
@@ -102,8 +103,9 @@ section {
 }
 
 @media (max-width: 992px) {
-  #header.mobile nav {
-    height: 400px;
+  #header.mobile .navbar-container {
+    height: 380px;
+    overflow: auto;
   }
 }
 
@@ -148,11 +150,13 @@ section {
 
 #header .navbar-container {
   width: 1210px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 1550px) {
   #header .navbar-container {
-    width: 900px;
+    width: 960px;
   }
 }
 
@@ -162,6 +166,7 @@ section {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     overflow: hidden;
+    height: 0;
   }
 }
 
@@ -172,8 +177,62 @@ section {
 
 @media (max-width: 992px) {
   #header nav {
-    height: 0px;
+    overflow: auto;
   }
+}
+
+#header nav .dropdown {
+  position: relative;
+}
+
+#header nav .dropdown:hover > a {
+  background-color: #ebebeb;
+  font-family: "Metropolis-Medium";
+  color: #4b4b4b;
+}
+
+#header nav .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  top: 64px;
+  display: block;
+}
+
+#header nav .dropdown .dropdown-content {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  top: 120px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+  #header nav .dropdown .dropdown-content {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#header nav .dropdown .dropdown-content li a {
+  display: block;
+  font-family: "Metropolis-Medium", sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 8px 0 8px 22px;
+  margin: 4px 0;
+}
+
+#header nav .dropdown .dropdown-content li a:hover {
+  background-color: #000000;
+  color: #fff;
 }
 
 #header nav .navbar li {
@@ -255,6 +314,9 @@ section {
   color: rgba(0, 0, 0, 0.26);
 }
 
+/*--------------------------------------------------------------
+############### İndex.HTML CSS KODLARI START ###############
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -993,6 +1055,15 @@ section {
 /*--------------------------------------------------------------
 # BlogDetail
 --------------------------------------------------------------*/
+#blogDetail h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  margin-top: 130px;
+}
+
 #blogDetail .swiper-container {
   position: relative;
 }
@@ -1070,17 +1141,6 @@ section {
 #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination {
   position: relative;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 992px) {
-  #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 #blogDetail .swiper-container .blogDetailSwiper .swiper-pagination .swiper-pagination-bullet {
@@ -1476,6 +1536,1705 @@ section {
   position: absolute;
   top: calc(50% - 16px);
   right: 15px;
+}
+
+/*--------------------------------------------------------------
+############### blog.HTML CSS KODLARI START ###############
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# BlogDetail
+--------------------------------------------------------------*/
+#blogBlogDetail {
+  margin-top: 120px;
+}
+
+#blogBlogDetail h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+#blogBlogDetail .swiper-container {
+  position: relative;
+}
+
+#blogBlogDetail .swiper-container .blog-Detail-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 30px);
+  left: -90px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 992px) {
+  #blogBlogDetail .swiper-container .blog-Detail-btn-prev {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
+#blogBlogDetail .swiper-container .blog-Detail-btn-prev i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#blogBlogDetail .swiper-container .blog-Detail-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 30px);
+  right: -90px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 992px) {
+  #blogBlogDetail .swiper-container .blog-Detail-btn-next {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
+#blogBlogDetail .swiper-container .blog-Detail-btn-next i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: #a8a8a8;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .card-container {
+  width: 80%;
+}
+
+@media (max-width: 992px) {
+  #blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .card-container {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .card-container {
+    width: 90%;
+  }
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide h4 {
+  font-size: 36px;
+  font-family: "Metropolis-Bold";
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 768px) {
+  #blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide h4 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide p {
+  font-size: 16px;
+  font-family: "Metropolis-Regular";
+  margin-bottom: 52px;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 86%;
+}
+
+@media (max-width: 768px) {
+  #blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons {
+    width: 100%;
+  }
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a {
+  font-family: "Metropolis-Medium", sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  border: solid 2px #efefef;
+  width: 200px;
+  padding: 14px 0;
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+  text-align: center;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#blogBlogDetail .swiper-container .blogDetailSwiper .swiper-slide .buttons a.active {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#blogBlogDetail .all-btn {
+  text-transform: uppercase;
+  font-family: "Metropolis-Medium";
+  font-size: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 74px;
+  border: solid 1px #eaeaea;
+  border-radius: 30px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#blogBlogDetail .all-btn:hover {
+  background-color: #eaeaea;
+}
+
+#blogBlogDetail .all-btn i {
+  opacity: 0.24;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+/*--------------------------------------------------------------
+# Blog Listesi
+--------------------------------------------------------------*/
+#blogLists .blog-card .card-head {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: #f5f5f5;
+  padding: 30px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#blogLists .blog-card .card-body {
+  background-color: #fff;
+  padding: 44px;
+}
+
+#blogLists .blog-card .card-body h4 {
+  font-size: 16px;
+  font-family: "Montserrat-Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+#blogLists .blog-card .card-body .card-body-detail {
+  margin-top: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blogLists .blog-card .card-body .card-body-detail a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  border: solid 1px #e8e8e8;
+  padding: 12px 50px 12px 40px;
+  border-radius: 8px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1400px) {
+  #blogLists .blog-card .card-body .card-body-detail a {
+    padding: 12px 40px 12px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  #blogLists .blog-card .card-body .card-body-detail a {
+    font-size: 14px;
+    padding: 8px 40px 8px 30px;
+  }
+}
+
+#blogLists .blog-card .card-body .card-body-detail a:hover {
+  background-color: #e8e8e8;
+  color: #fff;
+}
+
+#blogLists .blog-card .card-body .card-body-detail a:hover i {
+  color: #fff;
+}
+
+#blogLists .blog-card .card-body .card-body-detail a i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #cbcbcb;
+  position: absolute;
+  right: 13px;
+}
+
+#blogLists .blog-card .card-body .card-body-detail .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #bcbcbc;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#blogLists .blog-card .card-body .card-body-detail .date i {
+  padding-right: 8px;
+  font-size: 20px;
+}
+
+#blogLists .blog-card .card-body .card-body-detail .date h6 {
+  color: #bcbcbc;
+  font-family: "Montserrat-SemiBold";
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  #blogLists .blog-card .card-body .card-body-detail .date h6 {
+    font-size: 12px;
+  }
+}
+
+#blogLists .all-btn {
+  text-transform: uppercase;
+  font-family: "Metropolis-Medium";
+  font-size: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 74px;
+  border: solid 1px #eaeaea;
+  border-radius: 30px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#blogLists .all-btn:hover {
+  background-color: #eaeaea;
+}
+
+#blogLists .all-btn i {
+  opacity: 0.24;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+/*--------------------------------------------------------------
+############### blog-detail.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#blogContent {
+  margin-top: 120px;
+}
+
+#blogContent h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#blogContent h2 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#blogContent .content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#blogContent .content p {
+  padding-bottom: 20px;
+}
+
+#blogContent .swiper-container {
+  position: relative;
+}
+
+#blogContent .swiper-container .blog-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 100px);
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 576px) {
+  #blogContent .swiper-container .blog-btn-prev {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
+#blogContent .swiper-container .blog-btn-prev i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#blogContent .swiper-container .blog-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 100px);
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 576px) {
+  #blogContent .swiper-container .blog-btn-next {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
+#blogContent .swiper-container .blog-btn-next i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-head {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: #f5f5f5;
+  padding: 30px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body {
+  background-color: #fff;
+  padding: 44px;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body h4 {
+  font-size: 16px;
+  font-family: "Montserrat-Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail {
+  margin-top: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  border: solid 1px #e8e8e8;
+  padding: 12px 50px 12px 40px;
+  border-radius: 8px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a:hover {
+  background-color: #e8e8e8;
+  color: #fff;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a:hover i {
+  color: #fff;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #cbcbcb;
+  position: absolute;
+  right: 13px;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #bcbcbc;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date i {
+  padding-right: 8px;
+  font-size: 20px;
+}
+
+#blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date h6 {
+  color: #bcbcbc;
+  font-family: "Montserrat-SemiBold";
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+############### references.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#references {
+  margin-top: 120px;
+}
+
+#references h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#references ol {
+  margin-bottom: 30px;
+}
+
+#references ol li {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 42px;
+  border-radius: 10px;
+  border: #eaeaea 2px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: none;
+}
+
+@media (max-width: 1400px) {
+  #references ol li {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #references ol li {
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  #references ol li {
+    margin: 0px 6px 10px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  #references ol li {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+
+#references ol li:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#references ol li.active {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#references .swiper-container {
+  position: relative;
+}
+
+#references .swiper-container .what-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  #references .swiper-container .what-btn-prev {
+    position: static;
+    background-color: #bcbcbc;
+    margin: 0 10px;
+  }
+}
+
+#references .swiper-container .what-btn-prev i {
+  font-size: 20px;
+  color: #fff;
+}
+
+#references .swiper-container .what-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  #references .swiper-container .what-btn-next {
+    position: static;
+    background-color: #bcbcbc;
+    margin: 0 10px;
+  }
+}
+
+#references .swiper-container .what-btn-next i {
+  font-size: 20px;
+  color: #fff;
+}
+
+#references .img-body {
+  position: relative;
+  overflow: hidden;
+}
+
+#references .img-body:hover .img-content {
+  opacity: 1;
+  bottom: 10px;
+}
+
+#references .img-body .img-content {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  right: 20px;
+  bottom: -100px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+@media (max-width: 1400px) {
+  #references .img-body .img-content {
+    height: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  #references .img-body .img-content {
+    padding: 20px;
+    height: 80px;
+  }
+}
+
+#references .img-body .img-content h4 {
+  font-size: 24px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  #references .img-body .img-content h4 {
+    font-size: 16px;
+  }
+}
+
+#references .img-body .img-content h5 {
+  font-size: 18px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  #references .img-body .img-content h5 {
+    font-size: 14px;
+  }
+}
+
+#references .btn-container {
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  #references .btn-container {
+    margin-top: 30px;
+  }
+}
+
+#references .btn-container .all-product-btn {
+  font-family: "Metropolis-Medium";
+  border-radius: 30px;
+  border: solid #eaeaea 1px;
+  padding: 16px 0px 16px 40px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+#references .btn-container .all-product-btn:hover {
+  background-color: #eaeaea;
+}
+
+#references .btn-container .all-product-btn i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: rgba(0, 0, 0, 0.24);
+  font-size: 22px;
+  padding: 0 20px 0 20px;
+}
+
+/*--------------------------------------------------------------
+############### references-detail.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#references-detail {
+  margin-top: 120px;
+}
+
+#references-detail h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#references-detail .content-title {
+  margin-top: 160px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1500px) {
+  #references-detail .references-container {
+    margin: auto;
+    width: 86%;
+  }
+}
+
+@media (max-width: 768px) {
+  #references-detail .references-container {
+    width: 94%;
+  }
+}
+
+#references-detail .references-container .card-container {
+  width: 80%;
+  padding-top: 60px;
+}
+
+@media (max-width: 1400px) {
+  #references-detail .references-container .card-container {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  #references-detail .references-container .card-container {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #references-detail .references-container .card-container {
+    width: 90%;
+  }
+}
+
+#references-detail .references-container h4 {
+  font-size: 36px;
+  font-family: "Metropolis-Bold";
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 1200px) {
+  #references-detail .references-container h4 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #references-detail .references-container h4 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+
+#references-detail .references-container h5 {
+  font-size: 16px;
+  font-family: "Metropolis-Bold";
+  margin-bottom: 4px;
+}
+
+#references-detail .references-container p {
+  font-size: 16px;
+  font-family: "Metropolis-Regular";
+  margin-bottom: 20px;
+}
+
+#references-detail .references-container .prev-btn {
+  position: absolute;
+  left: -90px;
+  z-index: 2;
+  bottom: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  #references-detail .references-container .prev-btn {
+    position: static;
+  }
+}
+
+#references-detail .references-container .next-btn {
+  position: absolute;
+  right: -90px;
+  z-index: 2;
+  bottom: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  #references-detail .references-container .next-btn {
+    position: static;
+  }
+}
+
+#references-detail .references-container .text-item {
+  font-size: 16px;
+  font-family: "Metropolis-Medium";
+  opacity: 0.24;
+}
+
+#references-detail .references-container .btn-item {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 3px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  #references-detail .references-container .btn-item {
+    position: static;
+    margin: 10px 20px;
+  }
+}
+
+#references-detail .references-container .btn-item i {
+  font-size: 20px;
+  color: #575757;
+}
+
+#references-detail .swiper-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+#references-detail .swiper-container .refD-btn-prev {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 576px) {
+  #references-detail .swiper-container .refD-btn-prev {
+    position: static;
+    margin: 0 20px;
+  }
+}
+
+#references-detail .swiper-container .refD-btn-prev i {
+  font-size: 20px;
+  color: #a7a7a7;
+}
+
+#references-detail .swiper-container .refD-btn-next {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50% - 40px);
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  border: solid #ffffff 2px;
+  background-color: #f7f7f7;
+}
+
+@media (max-width: 576px) {
+  #references-detail .swiper-container .refD-btn-next {
+    position: static;
+    margin: 0 20px;
+  }
+}
+
+#references-detail .swiper-container .refD-btn-next i {
+  font-size: 20px;
+  color: #a7a7a7;
+}
+
+#references-detail .refDigerSwiper .swiper-slide.remove {
+  display: none;
+}
+
+#references-detail .refDigerSwiper .swiper-slide .img-body {
+  position: relative;
+}
+
+#references-detail .refDigerSwiper .swiper-slide .img-body:hover .img-content {
+  opacity: 1;
+  bottom: 10px;
+}
+
+#references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  right: 20px;
+  bottom: -100px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+@media (max-width: 1400px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
+    height: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
+    height: 120px;
+    padding: 20px;
+  }
+}
+
+#references-detail .refDigerSwiper .swiper-slide .img-body .img-content h4 {
+  font-size: 24px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content h4 {
+    font-size: 18px;
+  }
+}
+
+#references-detail .refDigerSwiper .swiper-slide .img-body .img-content h5 {
+  font-size: 18px;
+  font-family: "Metropolis-Bold", sans-serif;
+  color: #fff;
+  z-index: 2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content h5 {
+    font-size: 14px;
+  }
+}
+
+#references-detail .all-btn {
+  text-transform: uppercase;
+  font-family: "Metropolis-Medium";
+  font-size: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 74px;
+  border: solid 1px #eaeaea;
+  border-radius: 30px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#references-detail .all-btn:hover {
+  background-color: #eaeaea;
+}
+
+#references-detail .all-btn i {
+  opacity: 0.24;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+/*--------------------------------------------------------------
+############### Contact.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#contact {
+  margin-top: 120px;
+}
+
+#contact h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#contact h2 {
+  font-family: "Montserrat-Medium";
+  font-size: 42px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  border: none;
+  background-color: #f8f8f8;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-family: "Metropolis-Regular";
+  color: #171717;
+}
+
+#contact form input::-webkit-input-placeholder,
+#contact form textarea::-webkit-input-placeholder {
+  color: rgba(23, 23, 23, 0.377);
+}
+
+#contact form input:-ms-input-placeholder,
+#contact form textarea:-ms-input-placeholder {
+  color: rgba(23, 23, 23, 0.377);
+}
+
+#contact form input::-ms-input-placeholder,
+#contact form textarea::-ms-input-placeholder {
+  color: rgba(23, 23, 23, 0.377);
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: rgba(23, 23, 23, 0.377);
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+}
+
+#contact form .teklif-btn {
+  border-radius: 12px;
+  display: block;
+  background-color: #000000;
+  color: #fff;
+  font-family: "Metropolis-Medium", sans-serif;
+  padding: 12px 0;
+  text-align: center;
+  position: relative;
+}
+
+#contact form .teklif-btn img {
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 15px;
+}
+
+#contact .map {
+  border-radius: 20px;
+  width: 90%;
+  height: 450px;
+}
+
+@media (max-width: 992px) {
+  #contact .map {
+    width: 100%;
+  }
+}
+
+#contact .contact-details {
+  margin-top: 46px;
+}
+
+#contact .contact-details .contact-card {
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  height: 170px;
+  padding: 26px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+  #contact .contact-details .contact-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact .contact-details .contact-card {
+    text-align: center;
+  }
+}
+
+#contact .contact-details .contact-card p {
+  margin: 0;
+  font-family: "Metropolis-Regular";
+  font-size: 15px;
+}
+
+@media (max-width: 576px) {
+  #contact .contact-details .contact-card p {
+    font-size: 16px;
+  }
+}
+
+#contact .contact-details .contact-card .icon-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .contact-details .contact-card .icon-title span {
+  font-family: "Metropolis-SemiBold";
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  #contact .contact-details .contact-card .icon-title span {
+    font-size: 18px;
+  }
+}
+
+#contact .contact-details .contact-card .icon-title img {
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
+#contact .contact-details .contact-card .social-medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+}
+
+#contact .contact-details .contact-card .social-medias a {
+  color: #000000;
+  font-size: 24px;
+}
+
+#contact .contact-details .contact-card .social-medias a + a {
+  margin-left: 30px;
+}
+
+/*--------------------------------------------------------------
+############### About-us.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#aboutUs {
+  margin-top: 120px;
+}
+
+#aboutUs h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#aboutUs .content {
+  width: 90%;
+}
+
+@media (max-width: 1200px) {
+  #aboutUs .content {
+    width: 100%;
+  }
+}
+
+#aboutUs .content h2 {
+  font-family: "Metropolis-Medium";
+  font-size: 42px;
+  text-transform: capitalize;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 1400px) {
+  #aboutUs .content h2 {
+    font-size: 34px;
+  }
+}
+
+#aboutUs .content p {
+  font-family: "Metropolis-Regular";
+  font-size: 16px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 1200px) {
+  #aboutUs .aboutUsSwiper .swiper-slide {
+    text-align: center;
+  }
+}
+
+#aboutUs .aboutUsSwiper .swiper-slide img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#aboutUs .aboutUsSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 50px;
+}
+
+#aboutUs .aboutUsSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: #a8a8a8;
+}
+
+/*--------------------------------------------------------------
+############### Services.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#services {
+  margin-top: 120px;
+}
+
+#services h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#services .blog-card .card-head {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: #f5f5f5;
+  padding: 22px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#services .blog-card .card-body {
+  background-color: #fff;
+  padding: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#services .blog-card .card-body h4 {
+  font-family: "Montserrat-Bold";
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#services .blog-card .card-body a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  border: solid 1px #e8e8e8;
+  padding: 12px 40px 12px 30px;
+  border-radius: 8px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1400px) {
+  #services .blog-card .card-body a {
+    padding: 12px 40px 12px 20px;
+  }
+}
+
+#services .blog-card .card-body a:hover {
+  background-color: #e8e8e8;
+  color: #fff;
+}
+
+#services .blog-card .card-body a:hover i {
+  color: #fff;
+}
+
+#services .blog-card .card-body a i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #cbcbcb;
+  position: absolute;
+  right: 13px;
+}
+
+#services ol {
+  margin-bottom: 30px;
+}
+
+#services ol li {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 42px;
+  border-radius: 10px;
+  border: #eaeaea 2px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: none;
+}
+
+@media (max-width: 1400px) {
+  #services ol li {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #services ol li {
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  #services ol li {
+    margin: 0px 6px 10px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  #services ol li {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+
+#services ol li:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#services ol li.active {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+#services .all-product-btn {
+  font-family: "Metropolis-Medium";
+  border-radius: 30px;
+  border: solid #eaeaea 1px;
+  padding: 16px 0px 16px 40px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+#services .all-product-btn:hover {
+  background-color: #eaeaea;
+}
+
+#services .all-product-btn i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: rgba(0, 0, 0, 0.24);
+  font-size: 22px;
+  padding: 0 20px 0 20px;
+}
+
+/*--------------------------------------------------------------
+############### Services.HTML CSS KODLARI  START ###############
+--------------------------------------------------------------*/
+#services-detail {
+  margin-top: 120px;
+}
+
+#services-detail h3 {
+  font-family: "Montserrat-Medium";
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+#services-detail .content-title {
+  margin-top: 160px;
+  margin-bottom: 40px;
+}
+
+#services-detail .services-container {
+  width: 84%;
+}
+
+@media (max-width: 768px) {
+  #services-detail .services-container {
+    width: 94%;
+  }
+}
+
+#services-detail .services-container h4 {
+  font-size: 36px;
+  font-family: "Metropolis-Bold";
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 1200px) {
+  #services-detail .services-container h4 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #services-detail .services-container h4 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+
+#services-detail .services-container h5 {
+  font-size: 16px;
+  font-family: "Metropolis-Bold";
+  margin-bottom: 4px;
+}
+
+#services-detail .services-container p {
+  font-size: 16px;
+  font-family: "Metropolis-Regular";
+  margin-bottom: 20px;
+}
+
+#services-detail .services-container .btn-teklif {
+  border-radius: 30px;
+  display: inline-block;
+  background-color: #000000;
+  color: #fff;
+  font-family: "Metropolis-Medium", sans-serif;
+  padding: 12px 60px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+  #services-detail .servicesDetailSwiper .swiper-slide {
+    text-align: center;
+  }
+}
+
+#services-detail .servicesDetailSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 50px;
+}
+
+#services-detail .servicesDetailSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: #a8a8a8;
 }
 
 /*--------------------------------------------------------------
