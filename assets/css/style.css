@@ -1959,6 +1959,12 @@ section {
   margin-bottom: 10px;
 }
 
+@media (max-width: 992px) {
+  #blogContent h2 {
+    font-size: 26px;
+  }
+}
+
 #blogContent .content {
   text-align: center;
   margin-top: 50px;
@@ -2097,6 +2103,13 @@ section {
   transition: 0.3s;
 }
 
+@media (max-width: 576px) {
+  #blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a {
+    padding: 8px 40px 8px 20px;
+    margin-right: 4px;
+  }
+}
+
 #blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail a:hover {
   background-color: #e8e8e8;
   color: #fff;
@@ -2129,12 +2142,24 @@ section {
   font-size: 20px;
 }
 
+@media (max-width: 576px) {
+  #blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date i {
+    font-size: 18px;
+  }
+}
+
 #blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date h6 {
   color: #bcbcbc;
   font-family: "Montserrat-SemiBold";
   font-size: 14px;
   margin: 0;
   text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  #blogContent .swiper-container .blogSwiper .swiper-slide .blog-card .card-body .card-body-detail .date h6 {
+    font-size: 12px;
+  }
 }
 
 /*--------------------------------------------------------------

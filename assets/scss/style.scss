@@ -1434,6 +1434,9 @@ section {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
+    @include lg{
+      font-size: 26px;
+    }
   }
   .content {
     text-align: center;
@@ -1526,6 +1529,10 @@ section {
                 border-radius: 8px;
                 position: relative;
                 transition: 0.3s;
+                @include sm{
+                  padding: 8px 40px 8px 20px;
+                  margin-right: 4px;
+                }
                 &:hover {
                   background-color: #e8e8e8;
                   color: #fff;
@@ -1547,6 +1554,9 @@ section {
                 i {
                   padding-right: 8px;
                   font-size: 20px;
+                  @include sm {
+                    font-size: 18px;
+                  }
                 }
                 h6 {
                   color: #bcbcbc;
@@ -1554,6 +1564,10 @@ section {
                   font-size: 14px;
                   margin: 0;
                   text-transform: uppercase;
+                  @include sm {
+                    font-size: 12px;
+                  }
+                   
                 }
               }
             }
