@@ -6,6 +6,11 @@ $(document).ready(function() {
         $("#header").toggleClass("mobile");
     });
 
+    $(".navbar-container").click(function (e) { 
+        e.stopPropagation();
+        
+    });
+
     // Hero Swiper kod kısmı
     var heroSwiper = new Swiper(".heroSwiper", {
         fadeEffect: { crossFade: true },
