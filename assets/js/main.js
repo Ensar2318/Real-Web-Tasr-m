@@ -312,7 +312,7 @@ $(document).ready(function() {
     });
 
     
-    // Services-Details slider tanımlama
+    // servis-detay slider tanımlama
     var aboutUsSwiper = new Swiper(".servicesDetailSwiper", {
         slidesPerView: 1,
         speed: 1000,
