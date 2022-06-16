@@ -329,4 +329,16 @@ $(document).ready(function() {
 
     });
 
+
+    // TEST
+    let tanimlival=1;
+    $("#blogLists .col-xl-4").each(function (index, element) {
+        // element == this
+        let suan = $(element).attr("page");
+        console.log(suan);
+        if(suan!=tanimlival){
+        $(element).hide();
+        }
+    });
+
 });
