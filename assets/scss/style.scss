@@ -167,7 +167,7 @@ section {
         top: 120px;
         opacity: 0;
         visibility: hidden;
-        transition: 0.3s;
+        transition: 0.5s;
         @include lg {
           position: static;
           display: none;

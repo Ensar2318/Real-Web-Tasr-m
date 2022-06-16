@@ -5,7 +5,7 @@ $(document).ready(function() {
         e.preventDefault();
         $("#header").toggleClass("mobile");
     });
-    
+
 
     // Hero Swiper kod kısmı
     var heroSwiper = new Swiper(".heroSwiper", {
@@ -311,7 +311,7 @@ $(document).ready(function() {
         });
     });
 
-    
+
     // servis-detay slider tanımlama
     var aboutUsSwiper = new Swiper(".servicesDetailSwiper", {
         slidesPerView: 1,
@@ -330,15 +330,69 @@ $(document).ready(function() {
     });
 
 
-    // TEST
-    let tanimlival=1;
-    $("#blogLists .col-xl-4").each(function (index, element) {
+    // Blog Kısmındaki daha fazla butonu ile gösterme kodu
+    let seciliSayfaBlog = 1;
+    $("#blogLists .limitPage").each(function(index, element) {
         // element == this
-        let suan = $(element).attr("page");
-        console.log(suan);
-        if(suan!=tanimlival){
-        $(element).hide();
+        let suankiSayfa = $(element).attr("page");
+
+        if (suankiSayfa <= seciliSayfaBlog) {
+            $(element).slideDown();
+        } else {
+            $(element).slideUp();
+
         }
     });
+
+    $("#moreShowBlogList").click(function(e) {
+        e.preventDefault();
+        seciliSayfaBlog++;
+        $("#blogLists .limitPage").each(function(index, element) {
+            // element == this
+            let suankiSayfa = $(element).attr("page");
+
+            if (suankiSayfa <= seciliSayfaBlog) {
+
+                $(element).slideDown();
+            } else {
+                $(element).slideUp();
+
+            }
+        });
+    });
+
+    // Hizmet Detay Kısmındaki daha fazla butonu ile gösterme kodu
+    let seciliSayfaHizmetDetay = 1;
+    $("#services-detail .limitPage").each(function(index, element) {
+        // element == this
+        let suankiSayfa = $(element).attr("page");
+
+        if (suankiSayfa <= seciliSayfaHizmetDetay) {
+            $(element).slideDown();
+        } else {
+            $(element).slideUp();
+
+        }
+    });
+
+    $("#moreShowHizmetDetay").click(function(e) {
+        e.preventDefault();
+        seciliSayfaHizmetDetay++;
+        $("#services-detail .limitPage").each(function(index, element) {
+            // element == this
+            let suankiSayfa = $(element).attr("page");
+
+            if (suankiSayfa <= seciliSayfaHizmetDetay) {
+
+                $(element).slideDown();
+            } else {
+                $(element).slideUp();
+
+            }
+        });
+    });
+
+
+
 
 });
