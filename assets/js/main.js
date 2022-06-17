@@ -30,13 +30,21 @@ $(document).ready(function() {
     // What We Do Swiper filtreleme ve kaydırma kısmı
     var whatWeDoSwiper = new Swiper(".whatWeDoSwiper", {
         speed: 1000,
-        slidersPerView: 1,
-        spaceBetween: 200,
+        slidersPerView: 2,
+        spaceBetween: 40,
         navigation: {
             nextEl: ".what-btn-next",
             prevEl: ".what-btn-prev",
+        },
+        breakpoints: {
+
+            499: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 30
+            }
         }
     });
+
     $("#whatWeDo ol li").click(function(e) {
         e.preventDefault();
         $("#whatWeDo ol li").removeClass("active");
@@ -55,11 +63,18 @@ $(document).ready(function() {
         whatWeDoSwiper.destroy();
         whatWeDoSwiper = new Swiper(".whatWeDoSwiper", {
             speed: 1000,
-            slidersPerView: 1,
-            spaceBetween: 200,
+            slidersPerView: 2,
+            spaceBetween: 40,
             navigation: {
                 nextEl: ".what-btn-next",
                 prevEl: ".what-btn-prev",
+            },
+            breakpoints: {
+
+                499: {
+                    slidesPerView: 2,
+                    spaceBetweenSlides: 30
+                }
             }
         });
 

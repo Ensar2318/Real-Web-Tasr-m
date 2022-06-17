@@ -474,6 +474,11 @@ section {
           padding-left: 40px;
           background-color: rgba(0, 0, 0, 0.5);
           border-radius: 12px;
+          @include sm{
+            opacity: 1;
+            visibility: visible;
+            bottom: 10px;
+          }
           @include xxl {
             height: 120px;
           }

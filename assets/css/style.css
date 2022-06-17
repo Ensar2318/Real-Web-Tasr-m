@@ -637,6 +637,14 @@ section {
   border-radius: 12px;
 }
 
+@media (max-width: 576px) {
+  #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10px;
+  }
+}
+
 @media (max-width: 1400px) {
   #whatWeDo .whatWeDoSwiper .swiper-slide .img-body .img-content {
     height: 120px;
