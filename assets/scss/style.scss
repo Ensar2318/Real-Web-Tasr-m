@@ -1,8 +1,39 @@
 @import "breakpoints";
 @import "variables";
 
+//# 1. Font Tanımlamalar - Satır Başlangıç = (36)
+//# 2. General Tanımlamalar - Satır Başlangıç = (72)
+//# 3. Header Tanımlamalar - Satır Başlangıç = (111)
+//# 4. Footer Tanımlamalar - Satır Başlangıç = (2560)
+
+
+//# 5. İndex.Html Css Kodları - Satır Başlangıç = (298) 
+
+//# 5.1 Hero id - Satır Başlangıç = (302)
+//# 5.2 What We Do / Neler Yapıyoruz ? - Satır Başlangıç = (383) 
+//# 5.3 What Else We Do Side / Başka neler yapıyoruz ? - Satır Başlangıç = (389) 
+//# 5.4 Blog Side - Satır Başlangıç = (677) 
+//# 5.5 Blog Detail - Satır Başlangıç = (835)
+//# 5.6 Faq - Satır Başlangıç = (993) / Bitiş 
+//# 5.7 Bizi Secenler - Satır Başlangıç = (1079)
+//# 5.8 Teklif - Satır Başlangıç = (1124) 
+
+
+//# 6. blog.HTML Css Kodları - Satır Başlangıç = (1215) 
+
+//# 6.1 blog/blog Detail id - Satır Başlangıç = (1218) 
+//# 6.2 Blog List  - Satır Başlangıç = (1373) 
+
+//# 7. blog-detay.html Css Kodları - Satır Başlangıç = (1481) 
+//# 8. referanslar.html Css Kodları - Satır Başlangıç = (1643) 
+//# 9. referans-detay.html Css Kodları - Satır Başlangıç = (1830) 
+//# 10. iletisim.html Css Kodları - Satır Başlangıç = (2097) 
+//# 11. hakkimizda.html Css Kodları - Satır Başlangıç = (2215)
+//# 12. hizmetler.html Css Kodları - Satır Başlangıç = (2271) 
+//# 13. hizmetler-detay.html Css Kodları - Satır Başlangıç = (2394) 
+
 /*--------------------------------------------------------------
-# Fonts Variables
+# 1.Fonts Variables
 --------------------------------------------------------------*/
 @font-face {
   font-family: "Metropolis-Regular";
@@ -38,7 +69,7 @@
   src: url(../fonts/Montserrat-Bold.otf) format("opentype");
 }
 /*--------------------------------------------------------------
-# General
+# 2.General
 --------------------------------------------------------------*/
 
 body {
@@ -77,7 +108,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Header
+# 3.Header
 --------------------------------------------------------------*/
 #header {
   @include lg {
@@ -264,11 +295,11 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### İndex.HTML CSS KODLARI START ###############
+############### 5.İndex.HTML CSS KODLARI START ###############
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Hero
+# 5.1 Hero
 --------------------------------------------------------------*/
 #hero {
   background-image: url(../img/hero-bg.png);
@@ -349,7 +380,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# client
+# 5.2 What We Do / Neler Yapıyoruz ?
 --------------------------------------------------------------*/
 #whatWeDo {
   padding-top: 250px;
@@ -555,7 +586,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# What Else We Do Side
+# 5.3 What Else We Do Side / Başka neler yapıyoruz ?
 --------------------------------------------------------------*/
 #WhatElseWeDoSide {
   h3 {
@@ -643,7 +674,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# Blog Side
+# 5.4 Blog Side
 --------------------------------------------------------------*/
 #blog {
   background-color: #fafafa;
@@ -801,7 +832,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# BlogDetail
+# 5.5 BlogDetail
 --------------------------------------------------------------*/
 #blogDetail {
   h3 {
@@ -959,7 +990,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# faq
+# 5.6 faq
 --------------------------------------------------------------*/
 #faq {
   background-image: url(../img/faq-bg.png);
@@ -1045,7 +1076,7 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# BiziSecenler
+# 5.7 BiziSecenler
 --------------------------------------------------------------*/
 #biziSecenler {
   background-color: #fafafa;
@@ -1090,7 +1121,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# teklif Side 
+# 5.8 teklif Side 
 --------------------------------------------------------------*/
 #teklif {
   padding-top: 100px;
@@ -1181,10 +1212,10 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### blog.HTML CSS KODLARI START ###############
+############### 6.blog.HTML CSS KODLARI START ###############
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# BlogDetail
+# 6.1 BlogDetail
 --------------------------------------------------------------*/
 #blogBlogDetail {
   margin-top: 120px;
@@ -1339,7 +1370,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Blog Listesi
+# 6.2 Blog Listesi
 --------------------------------------------------------------*/
 #blogLists {
   .blog-card {
@@ -1447,7 +1478,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### blog-detay.html CSS KODLARI  START ###############
+############### 7. blog-detay.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #blogContent {
   margin-top: 120px;
@@ -1609,7 +1640,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### referanslar.html CSS KODLARI  START ###############
+############### 8. referanslar.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #references {
   margin-top: 120px;
@@ -1796,7 +1827,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### referans-detay.html CSS KODLARI  START ###############
+############### 9. referans-detay.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #references-detail {
   margin-top: 120px;
@@ -2063,7 +2094,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### iletisim.html CSS KODLARI  START ###############
+############### 10. iletisim.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #contact {
   margin-top: 120px;
@@ -2181,7 +2212,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### hakkimizda.html CSS KODLARI  START ###############
+############### 11. hakkimizda.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #aboutUs {
   margin-top: 120px;
@@ -2237,7 +2268,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### hizmetler.html CSS KODLARI  START ###############
+############### 12. hizmetler.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #services {
   margin-top: 120px;
@@ -2360,7 +2391,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-############### hizmetler.html CSS KODLARI  START ###############
+############### 13. hizmetler-detay.html CSS KODLARI  START ###############
 --------------------------------------------------------------*/
 #services-detail {
   margin-top: 120px;
@@ -2526,7 +2557,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Footer Side
+# 4.Footer Side
 --------------------------------------------------------------*/
 #footer {
   background-color: #fafafa;
