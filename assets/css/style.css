@@ -166,21 +166,8 @@ section {
 }
 
 #header .navbar-container {
-  width: 1210px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-@media (max-width: 1550px) {
-  #header .navbar-container {
-    width: 1000px;
-  }
-}
-
-@media (max-width: 1400px) {
-  #header .navbar-container {
-    width: 900px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -311,6 +298,18 @@ section {
 @media (max-width: 1400px) {
   #header .search {
     width: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  #header .search {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  #header .search {
+    display: none !important;
   }
 }
 

@@ -137,15 +137,8 @@ section {
     }
   }
   .navbar-container {
-    width: 1210px;
     transition: 0.3s;
-    @media (max-width: 1550px) {
-      width: 1000px;
-    }
   
-    @include xxl{
-      width: 900px;
-    }
     @include lg {
       width: auto;
       flex-basis: 100%;
@@ -245,6 +238,12 @@ section {
     padding: 10px 0 10px 16px;
     @include xxl {
       width: 160px;
+    }
+    @include lg{
+      margin-right: 20px;
+    }
+    @media(max-width:400px){
+      display: none !important;
     }
     i {
       font-size: 22px;
