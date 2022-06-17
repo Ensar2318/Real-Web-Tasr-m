@@ -2395,6 +2395,9 @@ section {
   #references .img-body .img-content {
     padding: 20px;
     height: 80px;
+    opacity: 1;
+    visibility: visible;
+    bottom: 10px;
   }
 }
 
@@ -2768,6 +2771,14 @@ section {
 @media (max-width: 768px) {
   #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
     height: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10px;
   }
 }
 
@@ -3405,6 +3416,9 @@ section {
   #services-detail .img-body .img-content {
     padding: 20px;
     height: 80px;
+    opacity: 1 !important;
+    visibility: visible;
+    bottom: 10px;
   }
 }
 

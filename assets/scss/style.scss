@@ -1733,10 +1733,12 @@ section {
       @include xxl {
         height: 120px;
       }
-
       @include sm {
         padding: 20px;
         height: 80px;
+        opacity: 1;
+        visibility: visible;
+        bottom: 10px;
       }
 
       h4 {
@@ -1996,8 +1998,11 @@ section {
           }
           @include md {
             height: 120px;
-          
-           
+          }
+          @include sm{
+            opacity: 1;
+            visibility: visible;
+            bottom: 10px;
           }
 
           h4 {
@@ -2457,10 +2462,13 @@ section {
       @include xxl {
         height: 120px;
       }
-
+    
       @include sm {
         padding: 20px;
         height: 80px;
+        opacity: 1 !important;
+        visibility: visible;
+        bottom: 10px;
       }
 
       h4 {
