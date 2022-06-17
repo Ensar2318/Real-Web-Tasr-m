@@ -30,7 +30,7 @@ $(document).ready(function() {
     // What We Do Swiper filtreleme ve kaydırma kısmı
     var whatWeDoSwiper = new Swiper(".whatWeDoSwiper", {
         speed: 1000,
-        slidersPerView: 2,
+        slidersPerView: 1,
         spaceBetween: 40,
         navigation: {
             nextEl: ".what-btn-next",
@@ -38,7 +38,7 @@ $(document).ready(function() {
         },
         breakpoints: {
 
-            499: {
+            700: {
                 slidesPerView: 2,
                 spaceBetweenSlides: 30
             }
@@ -63,7 +63,7 @@ $(document).ready(function() {
         whatWeDoSwiper.destroy();
         whatWeDoSwiper = new Swiper(".whatWeDoSwiper", {
             speed: 1000,
-            slidersPerView: 2,
+            slidersPerView: 1,
             spaceBetween: 40,
             navigation: {
                 nextEl: ".what-btn-next",
@@ -71,7 +71,7 @@ $(document).ready(function() {
             },
             breakpoints: {
 
-                499: {
+                700: {
                     slidesPerView: 2,
                     spaceBetweenSlides: 30
                 }
