@@ -1596,6 +1596,8 @@ section {
   padding: 12px 0;
   text-align: center;
   position: relative;
+  width: 100%;
+  border: none;
 }
 
 #teklif form .teklif-btn img {
@@ -2745,6 +2747,7 @@ section {
 @media (max-width: 1400px) {
   #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
     height: 120px;
+    padding: 20px;
   }
 }
 
@@ -2757,7 +2760,6 @@ section {
 @media (max-width: 768px) {
   #references-detail .refDigerSwiper .swiper-slide .img-body .img-content {
     height: 120px;
-    padding: 20px;
   }
 }
 
@@ -2901,6 +2903,8 @@ section {
   padding: 12px 0;
   text-align: center;
   position: relative;
+  width: 100%;
+  border: none;
 }
 
 #contact form .teklif-btn img {

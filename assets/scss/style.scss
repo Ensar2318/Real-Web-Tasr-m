@@ -1164,6 +1164,8 @@ section {
       padding: 12px 0;
       text-align: center;
       position: relative;
+      width: 100%;
+      border: none;
       img {
         position: absolute;
         top: calc(50% - 16px);
@@ -1981,13 +1983,16 @@ section {
           border-radius: 12px;
           @include xxl {
             height: 120px;
+            padding: 20px;
           }
           @include lg {
             height: 80px;
+           
           }
           @include md {
             height: 120px;
-            padding: 20px;
+          
+           
           }
 
           h4 {
@@ -2093,6 +2098,8 @@ section {
       padding: 12px 0;
       text-align: center;
       position: relative;
+      width: 100%;
+      border: none;
       img {
         position: absolute;
         top: calc(50% - 16px);
