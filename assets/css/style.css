@@ -2563,6 +2563,12 @@ section {
   margin-bottom: 20px;
 }
 
+#references-detail .references-container .link {
+  color: #919191;
+  font-size: 16px;
+  border-bottom: solid #919191 1px;
+}
+
 #references-detail .references-container .prev-btn {
   position: absolute;
   left: -90px;
