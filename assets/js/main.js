@@ -271,6 +271,7 @@ $(document).ready(function() {
 
     // Otomatik Sayfa Daha Fazla metodu
 
+
     $("#references .col-lg-6").each(function(index, element) {
         // element == this
 
@@ -280,16 +281,19 @@ $(document).ready(function() {
         $(element).attr("page", pageStartTanimlama);
     });
 
+    setTimeout(() => {
+        $refIso.isotope({
+            // filter element with numbers greater than 50
+            filter: function() {
+                // _this_ is the item element. Get text of element's .number
+                var page = $(this).attr('page');
+                // return true to show, false to hide
+                return page <= 1;
+            }
+        });
+    }, 500);
 
-    $refIso.isotope({
-        // filter element with numbers greater than 50
-        filter: function() {
-            // _this_ is the item element. Get text of element's .number
-            var page = $(this).attr('page');
-            // return true to show, false to hide
-            return page <= 1;
-        }
-    });
+
 
     $("#references .all-product-btn").click(function(e) {
         e.preventDefault();
