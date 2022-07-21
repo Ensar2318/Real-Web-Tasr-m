@@ -2355,6 +2355,7 @@ section {
 #references .img-body {
   position: relative;
   overflow: hidden;
+  min-height: 477px;
 }
 
 #references .img-body:hover .img-content {

@@ -6,31 +6,29 @@
 //# 3. Header Tanımlamalar - Satır Başlangıç = (111)
 //# 4. Footer Tanımlamalar - Satır Başlangıç = (2560)
 
-
-//# 5. İndex.Html Css Kodları - Satır Başlangıç = (298) 
+//# 5. İndex.Html Css Kodları - Satır Başlangıç = (298)
 
 //# 5.1 Hero id - Satır Başlangıç = (302)
-//# 5.2 What We Do / Neler Yapıyoruz ? - Satır Başlangıç = (383) 
-//# 5.3 What Else We Do Side / Başka neler yapıyoruz ? - Satır Başlangıç = (389) 
-//# 5.4 Blog Side - Satır Başlangıç = (677) 
+//# 5.2 What We Do / Neler Yapıyoruz ? - Satır Başlangıç = (383)
+//# 5.3 What Else We Do Side / Başka neler yapıyoruz ? - Satır Başlangıç = (389)
+//# 5.4 Blog Side - Satır Başlangıç = (677)
 //# 5.5 Blog Detail - Satır Başlangıç = (835)
-//# 5.6 Faq - Satır Başlangıç = (993) / Bitiş 
+//# 5.6 Faq - Satır Başlangıç = (993) / Bitiş
 //# 5.7 Bizi Secenler - Satır Başlangıç = (1079)
-//# 5.8 Teklif - Satır Başlangıç = (1124) 
+//# 5.8 Teklif - Satır Başlangıç = (1124)
 
+//# 6. blog.HTML Css Kodları - Satır Başlangıç = (1215)
 
-//# 6. blog.HTML Css Kodları - Satır Başlangıç = (1215) 
+//# 6.1 blog/blog Detail id - Satır Başlangıç = (1218)
+//# 6.2 Blog List  - Satır Başlangıç = (1373)
 
-//# 6.1 blog/blog Detail id - Satır Başlangıç = (1218) 
-//# 6.2 Blog List  - Satır Başlangıç = (1373) 
-
-//# 7. blog-detay.html Css Kodları - Satır Başlangıç = (1481) 
-//# 8. referanslar.html Css Kodları - Satır Başlangıç = (1643) 
-//# 9. referans-detay.html Css Kodları - Satır Başlangıç = (1830) 
-//# 10. iletisim.html Css Kodları - Satır Başlangıç = (2097) 
+//# 7. blog-detay.html Css Kodları - Satır Başlangıç = (1481)
+//# 8. referanslar.html Css Kodları - Satır Başlangıç = (1643)
+//# 9. referans-detay.html Css Kodları - Satır Başlangıç = (1830)
+//# 10. iletisim.html Css Kodları - Satır Başlangıç = (2097)
 //# 11. hakkimizda.html Css Kodları - Satır Başlangıç = (2215)
-//# 12. hizmetler.html Css Kodları - Satır Başlangıç = (2271) 
-//# 13. hizmetler-detay.html Css Kodları - Satır Başlangıç = (2394) 
+//# 12. hizmetler.html Css Kodları - Satır Başlangıç = (2271)
+//# 13. hizmetler-detay.html Css Kodları - Satır Başlangıç = (2394)
 
 /*--------------------------------------------------------------
 # 1.Fonts Variables
@@ -72,8 +70,8 @@
 # 2.General
 --------------------------------------------------------------*/
 
-html{
- scroll-padding-top: 80px;
+html {
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -117,11 +115,10 @@ section {
 #header {
   @include lg {
     &.mobile {
-     
       .navbar-container {
         height: 380px;
         overflow: auto;
-        @media (max-height: 485px) and  (max-width: 1100px) {
+        @media (max-height: 485px) and (max-width: 1100px) {
           height: 140px;
         }
       }
@@ -140,11 +137,11 @@ section {
   @include lg {
     height: auto;
   }
-  .container-fluid{
-    @include lg{
+  .container-fluid {
+    @include lg {
       padding: 20px 0;
     }
-    @media (max-height: 485px) and  (max-width: 1100px) {
+    @media (max-height: 485px) and (max-width: 1100px) {
       padding: 10px 0;
     }
   }
@@ -173,7 +170,7 @@ section {
   }
   .navbar-container {
     transition: 0.3s;
-  
+
     @include lg {
       width: auto;
       flex-basis: 100%;
@@ -247,13 +244,12 @@ section {
           color: #4b4b4b;
           @media (max-width: 1550px) {
             padding: 8px;
-           
           }
-          @media (max-height: 485px) and  (max-width: 1100px) {
+          @media (max-height: 485px) and (max-width: 1100px) {
             padding: 6px;
             font-size: 14px;
           }
-       
+
           &.active {
             background-color: #ebebeb;
             color: #000000;
@@ -274,10 +270,10 @@ section {
     @include xxl {
       width: 160px;
     }
-    @include lg{
+    @include lg {
       margin-right: 20px;
     }
-    @media(max-width:400px){
+    @media (max-width: 400px) {
       display: none !important;
     }
     i {
@@ -509,7 +505,7 @@ section {
           padding-left: 40px;
           background-color: rgba(0, 0, 0, 0.5);
           border-radius: 12px;
-          @include sm{
+          @include sm {
             opacity: 1;
             visibility: visible;
             bottom: 10px;
@@ -1026,7 +1022,7 @@ section {
           font-family: "Metropolis-Regular";
           box-shadow: none;
           color: #000000 !important;
-          @include sm{
+          @include sm {
             padding-right: 50px;
           }
           &.collapsed {
@@ -1499,7 +1495,7 @@ section {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
-    @include lg{
+    @include lg {
       font-size: 26px;
     }
   }
@@ -1594,7 +1590,7 @@ section {
                 border-radius: 8px;
                 position: relative;
                 transition: 0.3s;
-                @include sm{
+                @include sm {
                   padding: 8px 40px 8px 20px;
                   margin-right: 4px;
                 }
@@ -1632,7 +1628,6 @@ section {
                   @include sm {
                     font-size: 12px;
                   }
-                   
                 }
               }
             }
@@ -1743,6 +1738,7 @@ section {
   .img-body {
     position: relative;
     overflow: hidden;
+    min-height: 477px;
     &:hover {
       .img-content {
         opacity: 1;
@@ -1891,7 +1887,7 @@ section {
       font-family: "Metropolis-Regular";
       margin-bottom: 20px;
     }
-    .link{
+    .link {
       color: #919191;
       font-size: 16px;
       border-bottom: solid #919191 1px;
@@ -2034,12 +2030,11 @@ section {
           }
           @include lg {
             height: 80px;
-           
           }
           @include md {
             height: 120px;
           }
-          @include sm{
+          @include sm {
             opacity: 1;
             visibility: visible;
             bottom: 10px;
@@ -2502,7 +2497,7 @@ section {
       @include xxl {
         height: 120px;
       }
-    
+
       @include sm {
         padding: 20px;
         height: 80px;
