@@ -196,6 +196,10 @@ section {
           visibility: visible;
           top: 64px;
           display: block;
+          width: 200px;
+          @include lg{
+            width: 100%;
+          }
         }
       }
       .dropdown-content {

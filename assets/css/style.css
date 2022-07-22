@@ -210,6 +210,13 @@ section {
   visibility: visible;
   top: 64px;
   display: block;
+  width: 200px;
+}
+
+@media (max-width: 992px) {
+  #header nav .dropdown:hover .dropdown-content {
+    width: 100%;
+  }
 }
 
 #header nav .dropdown .dropdown-content {
